@@ -9,4 +9,4 @@
 	exit;
 ?>
 Something is wrong with the XAMPP installation :-(
-	<!--- test333--->
+	<!--- test344--->
