@@ -5,8 +5,11 @@
 		$uri = 'http://';
 	}
 	$uri .= $_SERVER['HTTP_HOST'];
-	header('Location: '.$uri.'/dashboard/');
+	header('Location: '.$uri.'/KKU-GIT/login/login.php');
 	exit;
 ?>
+<<<<<<< HEAD
 Something is wrong with the XAMPP installation :-(
 	<!--- test10--->
+=======
+>>>>>>> PJH
