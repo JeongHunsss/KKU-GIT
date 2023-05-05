@@ -1,8 +1,8 @@
 <?php
 // 데이터베이스 연결 설정
 $host = 'localhost';
-$username = 'root';
-$password = '1234';
+$username = '';   // 본인 데이터베이스 이름
+$password = '';   // 본인 데이터베이스 비밀번호
 $dbname = 'kku-git';
 $conn = mysqli_connect($host, $username, $password, $dbname);
 if (!$conn) {
