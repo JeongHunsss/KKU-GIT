@@ -33,7 +33,7 @@ if (isset($_POST['register'])) {
     <input class="login-input" type="text" id="name" name="name" required>
     <button class="login-button" type="submit" name="register">회원가입</button>
     <div><hr style="border-width: 1px; border-color: #ccc;"></div>
-    <button class="cancel-button" onclick="location.href='login.php'">취소</button>
+    <button class="cancel-button" onclick="javascript:history.back();">취소</button>
 </form>
 </body>
 </html>

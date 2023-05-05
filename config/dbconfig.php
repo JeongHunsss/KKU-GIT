@@ -1,14 +1,11 @@
 <?php
-// MySQL 연결 정보
-$host = "localhost"; // MySQL 서버 호스트
-$username = "root"; // MySQL 사용자 이름
-$password = "1234"; // MySQL 사용자 비밀번호
-$dbname = "kku_git"; // MySQL 데이터베이스 이름
-
-$conn = new mysqli($host, $username, $password, $dbname);
-
-// 연결 확인
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+// 데이터베이스 연결 설정
+$host = 'localhost';
+$username = '';   // 본인 데이터베이스 이름
+$password = '';   // 본인 데이터베이스 비밀번호
+$dbname = 'kku_git';
+$conn = mysqli_connect($host, $username, $password, $dbname);
+if (!$conn) {
+    die('Could not connect to the database: ' . mysqli_connect_error());
 }
-echo "Connected successfully";
+?>
