@@ -12,10 +12,10 @@
             <div class="sidebar">
                 <?php include '../sidebar.php'; ?>
             </div>
-            <header>
+            <div class="header-wrapper">
                 <?php include '../header.php'; ?>
                 <hr class="my-hr">
-            </header>
+            </div>
             <div class="title">
                 <h1>푼 문제 내역</h1>
             </div>

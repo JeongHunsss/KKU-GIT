@@ -12,10 +12,10 @@
             <div class="sidebar">
                 <?php include '../sidebar.php'; ?>
             </div>
-            
+            <div class="header-wrapper">
                 <?php include '../header.php'; ?>
-            
-            <hr class="my-hr">
+                <hr class="my-hr">
+            </div>
                 <div class="container">
                     <h1>마이페이지</h1>
                     <!-- <hr class="my-hr"> -->
