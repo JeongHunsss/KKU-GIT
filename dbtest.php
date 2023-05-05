@@ -1,6 +1,10 @@
 <?php
 // MySQL 서버 연결
+<<<<<<< HEAD
 $conn = mysqli_connect("localhost", "사용자이름", "비밀번호", "데이터베이스이름");
+=======
+$conn = mysqli_connect("localhost", "root", "1234", "kku-git-test-db");
+>>>>>>> PJH
 
 // 연결 확인
 if ($conn->connect_error) {
