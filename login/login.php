@@ -10,7 +10,7 @@ if (isset($_POST['login'])) {
     $user_password = isset($_POST['password']) ? mysqli_real_escape_string($conn, $_POST['password']) : '';
 
     // 데이터베이스에서 사용자 이름과 비밀번호 확인
-    $query = "SELECT * FROM users WHERE id='$user_id' AND password='$user_password'";
+    $query = "SELECT * FROM user WHERE id='$user_id' AND password='$user_password'";
     $result = mysqli_query($conn, $query);
     if (mysqli_num_rows($result) == 1) {
         // 세션 시작 및 로그인 후 페이지로 이동
