@@ -1,0 +1,74 @@
+form {
+    display: inline-block;
+    margin: 20px;
+}
+label {
+    display: block;
+    margin-top: 10px;
+}
+input[type="submit"], input[type="button"] {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 2px;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+input[type="submit"] {
+    margin-right: 10px;
+}
+input[type="text"] {
+    display: inline-block;
+    margin-right: 10px;
+}
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+}
+th,
+td {
+    border: 1px solid transparent;
+    border-right: 2px solid transparent;
+}
+th {
+    border-bottom: 2px solid black;
+}
+th:first-child,
+td:first-child,
+th:nth-child(2),
+td:nth-child(2),
+th:nth-child(3),
+td:nth-child(3),
+th:nth-child(4),
+td:nth-child(4),
+th:nth-child(5),
+td:nth-child(5) {
+    border-right: 2px solid transparent;
+}
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-box a {
+    border: 1px solid black;
+    margin: 0 5px;
+    padding: 5px;
+}

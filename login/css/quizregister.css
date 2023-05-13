@@ -1,0 +1,42 @@
+form {
+    margin: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="submit"],
+input[type="button"] {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 2px;
+    padding: 10px 20px;
+    background-color: blue; /* 수정된 부분 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type="submit"] {
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* 추가된 부분 */
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}

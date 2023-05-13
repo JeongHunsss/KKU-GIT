@@ -1,0 +1,46 @@
+.quizregister-form {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+    .quizregister-form label {
+    display: block;
+    margin-bottom: 10px;
+    }
+    .quizregister-form label input[type="text"], .quizregister-form label textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    resize: none;
+    }
+    .quizregister-form label input[type="radio"] {
+    margin-right: 10px;
+    }
+    .quizregister-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    .quizregister-form button[type="submit"] {
+    background-color: blue;
+    }
+    .quizregister-form button[type="reset"] {
+    background-color: gray;
+    }
+    .quizregister-form .quizregister-form-header {
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    }
+    .quizregister-form .quizregister-form-header h2 {
+    margin: 0;
+    }
+    .quizregister-form .quizregister-form-header p {
+    font-size: 14px;
+    }
