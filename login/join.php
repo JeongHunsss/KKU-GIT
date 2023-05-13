@@ -8,16 +8,25 @@
 <body class="join-body">
     <form method="post" class="join-form">
         <h2>KKU-GIT 회원가입</h2>
+
+
+
+        <label class="join-label" for="user_name">
+            이름 <input class="join-input" type="text" id="user_name" name="user_name" required>
+       </label>
+
         <label class="join-label" for="user_id">
         <div class="input-group">
             아이디 <input class="join-input" type="text" id="user_id" name="user_id" required>
             <button class="verification-code-button">중복확인</button>
-        </div>
-        </label>
+        </div></label>
+
+
         <br>
         <label class="join-label" for="password">
             비밀번호 <input class="join-input" type="password" id="password" name="password" required>
         <br></label>
+
         <label class="join-label" for="email">
         <div class="input-group">
             이메일 <input class="join-input" type="email" id="email" name="email" required>
