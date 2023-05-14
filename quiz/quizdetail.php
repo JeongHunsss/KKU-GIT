@@ -4,6 +4,7 @@
     <title>문제 풀기 페이지</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./css/quizdetail.css">
+    <link rel="stylesheet" type="text/css" href="./css/quizregister.css">
 </head>
 <body>
     <h1>문제 풀기 페이지</h1>
@@ -27,7 +28,8 @@
                     <label>정답 입력: <input type="text"></label>
                 </form>
             </div>
-            <div class="problem-buttons">
+
+        <div class="problem-buttons">
             <button>정답 제출</button>
             <button>정답 공개</button>
         </div>
