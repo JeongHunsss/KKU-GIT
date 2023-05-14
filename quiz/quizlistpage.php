@@ -6,7 +6,7 @@
     <title>문제 리스트 페이지</title>
 </head>
 <body>
-    <h1>문제 리스트 페이지</h1><br>
+    <h1>문제 리스트 페이지</h1>
     <form method="get" action="">
         <label for="subject">과목 검색 
         <input type="text" name="subject" id="subject">

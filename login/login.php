@@ -14,7 +14,7 @@
     <input class="login-input" type="password" id="password" name="password" required>
     <button class="login-button" type="submit" name="login">로그인</button>
     <div><hr style="border-width 1px; border-color:#ccc;"></div>
-    <button class="cancel-button" onclick="location.href='join.php'">회원가입</button>
+    <button class="cancel-button" onclick="location.href='joinpage.php'">회원가입</button>
 </form>
 </body>
 </html>
