@@ -1,0 +1,50 @@
+/*홈 아이콘*/
+.material-icons{
+    font-size:large;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 75px;
+}
+
+
+
+      /* 사이드바 스타일 */
+      .sidebar {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color:#007bff;
+        overflow-x: hidden;
+        padding-top: 20px;
+      }
+
+      /* 사이드바 안의 링크 스타일 */
+      .sidebar a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        display: block;
+      }
+
+      /* 사이드바 안의 링크 스타일 - hover */
+      .sidebar a:hover {
+        color: #f1f1f1;
+      }
+      
+      h2{
+        color: white;
+        text-align: center;
+        margin: 10px;
+      }
+      hr {
+        margin: 10px 10px; 
+        border: none; 
+        border-top: 3px solid white;
+      }
+    

@@ -1,0 +1,1 @@
+notice_delete.php는 php만 사용하면 됨.

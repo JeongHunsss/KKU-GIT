@@ -1,0 +1,62 @@
+.my-hr {
+  border-top: 1px solid black;
+}
+  table {
+    width: 100%;
+  }
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  th:first-child, td:first-child {
+    width: 10%;
+  }
+  th:nth-child(2), td:nth-child(2) {
+    width: 20%;
+  }
+  th:nth-child(3), td:nth-child(3) {
+    width: 40%;
+  }
+  th:nth-child(4), td:nth-child(4) {
+    width: 15%;
+  }
+  th:nth-child(5), td:nth-child(5) {
+    width: 15%;
+  }
+
+  .title {
+        text-align: center;
+        margin-left: 200px;
+  }
+
+  .container{
+    border-radius: 10px; 
+    border: 1px solid black; 
+    padding: 20px; 
+    width: 70%; 
+    margin: 0;
+    margin-left: 270px;
+  }
+/*페이지네이션*/
+.pagination {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
