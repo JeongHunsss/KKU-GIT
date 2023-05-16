@@ -2,10 +2,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../bars/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="../bars/topbar.css">
     <link rel="stylesheet" type="text/css" href="./css/quizlistpage.css">
     <title>문제 리스트 페이지</title>
 </head>
 <body>
+    <div class="sidebar">
+        <?php include '../bars/sidebar.php'; ?>
+    </div>
+            
+    <?php include '../bars/topbar.php'; ?>
+
     <h1>문제 리스트 페이지</h1>
     <form method="get" action="">
         <label for="subject">과목 검색 

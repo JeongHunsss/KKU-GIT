@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 session_start();
 
@@ -18,7 +17,7 @@ if (isset($_POST['login'])) {
         $user_info = mysqli_fetch_assoc($result);
         $_SESSION['user_id'] = $user_info['id'];
         $_SESSION['name'] = $user_info['name'];
-        header('Location: successlogin.php');
+        header('Location: ../main/main.php');
     } else {
         // 로그인 실패 메시지 표시
         $error = '아이디 또는 패스워드가 틀립니다.';
@@ -26,8 +25,6 @@ if (isset($_POST['login'])) {
 }
 ?>
 
-=======
->>>>>>> 3bf37a1e9bf8ae535bec4677cb311a3db86b4601
 <!DOCTYPE html>
 <html>
 <head>

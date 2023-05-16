@@ -3,9 +3,17 @@
 <head>
     <title>KKU-GIT</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../bars/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="../bars/topbar.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 <body>
+  <div class="sidebar">
+    <?php include '../bars/sidebar.php'; ?>
+  </div>
+            
+  <?php include '../bars/topbar.php'; ?>
+
     <h1>문제 풀기 페이지</h1>
     <div class="notice-wrapper">
     <div class="notice-box">

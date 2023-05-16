@@ -3,17 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <title>등록 문제 내역</title>
-        <link rel="stylesheet" type="text/css" href="../sidebar.css">
-        <link rel="stylesheet" type="text/css" href="../header.css">
-        <link rel="stylesheet" type="text/css" href="./css/problem.css">
+        <link rel="stylesheet" type="text/css" href="../bars/sidebar.css">
+        <link rel="stylesheet" type="text/css" href="../bars/topbar.css">
+        <link rel="stylesheet" type="text/css" href="./css/mypage.css">
     </head> 
     <body>
         <div class="cont">
             <div class="sidebar">
-                <?php include '../sidebar.php'; ?>
+                <?php include '../bars/sidebar.php'; ?>
             </div>
             <header>
-                <?php include '../header.php'; ?>
+                <?php include '../bars/topbar.php'; ?>
                 <hr class="my-hr">
             </header>
 

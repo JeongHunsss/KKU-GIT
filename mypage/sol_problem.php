@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>푼 문제 내역</title>
-        <link rel="stylesheet" type="text/css" href="./css/problem.css">
-        <link rel="stylesheet" type="text/css" href="../sidebar.css">
-        <link rel="stylesheet" type="text/css" href="../header.css">
+        <link rel="stylesheet" type="text/css" href="../bars/sidebar.css">
+        <link rel="stylesheet" type="text/css" href="../bars/topbar.css">
+        <link rel="stylesheet" type="text/css" href="./css/mypage.css">
     </head> 
     <body>
     <div class="cont">

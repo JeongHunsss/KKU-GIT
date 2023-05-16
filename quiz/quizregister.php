@@ -3,9 +3,17 @@
 <head>
 	<title>문제 등록 페이지</title>
 		 <meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="../bars/sidebar.css">
+        <link rel="stylesheet" type="text/css" href="../bars/topbar.css">
         <link rel="stylesheet" type="text/css" href="./css/quizregister.css">
 </head>
 <body>
+	<div class="sidebar">
+        <?php include '../bars/sidebar.php'; ?>
+    </div>
+            
+    <?php include '../bars/topbar.php'; ?>
+	
 	<h1>문제 등록</h1>
 	<form method="post" action="submit.php">
 

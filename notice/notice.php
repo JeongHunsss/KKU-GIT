@@ -4,9 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>공지사항</title>
+    <link rel="stylesheet" type="text/css" href="../bars/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="../bars/topbar.css">
     <link rel="stylesheet" type="text/css" href="./css/notice.css">
 </head>
 <body>
+    <div class="sidebar">
+        <?php include '../bars/sidebar.php'; ?>
+    </div>
+            
+    <?php include '../bars/topbar.php'; ?>
     <div class="header">
 		<h1>공지사항</h1>
 		<div class="search-container">
