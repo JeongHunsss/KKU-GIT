@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>공지사항</title>
-    <link rel="stylesheet" type="text/css" href="../bars/sidebar.css">
-    <link rel="stylesheet" type="text/css" href="../bars/topbar.css">
-    <link rel="stylesheet" type="text/css" href="./css/notice.css">
+    <link rel="stylesheet" type="text/css" href="../bars/css/side_bar.css">
+    <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
+    <link rel="stylesheet" type="text/css" href="./css/notice_list.css">
 </head>
 <body>
     <div class="sidebar">
-        <?php include '../bars/sidebar.php'; ?>
+        <?php include '../bars/side_bar.php'; ?>
     </div>
             
-    <?php include '../bars/topbar.php'; ?>
+    <?php include '../bars/top_bar.php'; ?>
     <div class="header">
 		<h1>공지사항</h1>
 		<div class="search-container">
@@ -22,7 +22,7 @@
 				<button type="submit">검색</button>
 			</form>
             <div class="write-btn">
-                <a href="notice_write.php" class="write-button">글쓰기</a>
+                <a href="notice_add.php" class="write-button">글쓰기</a>
             </div>
         </div>
 	</div>

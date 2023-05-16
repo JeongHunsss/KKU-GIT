@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>공지사항 글쓰기</title>
-    <link rel="stylesheet" type="text/css" href="./css/notice_write.css">
+    <link rel="stylesheet" type="text/css" href="./css/notice_add.css">
 </head>
 <body>
     <div class="header">

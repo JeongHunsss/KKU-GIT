@@ -4,6 +4,7 @@
     <title>사이드바 예제</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/side_bar.css">
   </head>
   <body>
     
@@ -11,13 +12,13 @@
         <h2>KKU-GIT</h2>
         <a href="../main/main.php"><i class="material-icons">home</i></a>
         <hr>
-        <a href="../mypage/mypage.php">마이페이지</a>
+        <a href="../my_info/my_page.php">마이페이지</a>
         <hr>
-        <a href="../notice/notice.php">공지사항</a>
+        <a href="../notice/notice_list.php">공지사항</a>
         <hr>
-        <a href="../quiz/quizregister.php">문제등록</a>
+        <a href="../problem/problem_add.php">문제 등록</a>
         <hr>
-        <a href="../quiz/quizlistpage.php">문제풀기</a>
+        <a href="../problem/problem_list.php">문제 리스트</a>
         <hr>
     </div>    
     

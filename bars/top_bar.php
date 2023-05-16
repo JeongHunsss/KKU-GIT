@@ -3,6 +3,7 @@
 <html>
 <header>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/top_bar.css">
     <title>topbar</title>
     
     <div class="user-info">

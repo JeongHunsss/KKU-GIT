@@ -2,17 +2,17 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../bars/sidebar.css">
-    <link rel="stylesheet" type="text/css" href="../bars/topbar.css">
-    <link rel="stylesheet" type="text/css" href="./css/quizlistpage.css">
+    <link rel="stylesheet" type="text/css" href="../bars/css/side_bar.css">
+    <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
+    <link rel="stylesheet" type="text/css" href="./css/problem_list.css">
     <title>문제 리스트 페이지</title>
 </head>
 <body>
     <div class="sidebar">
-        <?php include '../bars/sidebar.php'; ?>
+        <?php include '../bars/side_bar.php'; ?>
     </div>
             
-    <?php include '../bars/topbar.php'; ?>
+    <?php include '../bars/top_bar.php'; ?>
 
     <h1>문제 리스트 페이지</h1>
     <form method="get" action="">
@@ -21,7 +21,7 @@
         <input type="submit" value="검색"></label>
     </form>
 
-    <form method="get" action="quizregister.php" style="float:right; margin-right:0px;">
+    <form method="get" action="problem_add.php" style="float:right; margin-right:0px;">
         <input type="submit" value="문제 등록">
     </form>
     

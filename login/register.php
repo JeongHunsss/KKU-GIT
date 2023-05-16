@@ -21,7 +21,7 @@ if (isset($_POST['register'])) {
 <head>
     <title>KKU-GIT 회원가입</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="./css/joinpage.css">
+    <link rel="stylesheet" type="text/css" href="./css/register.css">
 </head>
 <body class="join-body">
     <form method="post" class="join-form">

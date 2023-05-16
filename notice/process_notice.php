@@ -1,1 +1,0 @@
-process_notice.php는 php만 사용하면 됨.
