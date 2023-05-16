@@ -2,24 +2,25 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>푼 문제 내역</title>
-        <link rel="stylesheet" type="text/css" href="../bars/sidebar.css">
-        <link rel="stylesheet" type="text/css" href="../bars/topbar.css">
-        <link rel="stylesheet" type="text/css" href="./css/mypage.css">
+        <title>등록 문제 내역</title>
+        <link rel="stylesheet" type="text/css" href="../bars/css/side_bar.css">
+        <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
+        <link rel="stylesheet" type="text/css" href="./css/my_page.css">
     </head> 
     <body>
-    <div class="cont">
+        <div class="cont">
             <div class="sidebar">
-                <?php include '../sidebar.php'; ?>
+                <?php include '../bars/side_bar.php'; ?>
             </div>
             <header>
-                <?php include '../header.php'; ?>
+                <?php include '../bars/top_bar.php'; ?>
                 <hr class="my-hr">
             </header>
-            <div class="title">
-                <h1>푼 문제 내역</h1>
-            </div>
 
+            <div class="title">
+                <h1>등록 문제 내역</h1>
+            </div>
+            
             <div class="container">
             <table>
                 <thead>
@@ -33,7 +34,7 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td>1</td>
+                    <td>1</td> 
                     <td>자료구조</td>
                     <td>스택 구현하기</td>
                     <td>홍길동</td>
@@ -66,6 +67,6 @@
                 <a href="#">3</a>
                 <a href="#">&raquo;</a>
             </div>
-    </div>
+        </div>
 </body>
 </html>

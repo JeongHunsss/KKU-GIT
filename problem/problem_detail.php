@@ -3,8 +3,10 @@
 <head>
     <title>문제 풀기 페이지</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="./css/quizdetail.css">
-    <link rel="stylesheet" type="text/css" href="./css/quizregister.css">
+    <link rel="stylesheet" type="text/css" href="../bars/css/side_bar.css">
+    <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
+    <link rel="stylesheet" type="text/css" href="./css/problem_detail.css">
+    <link rel="stylesheet" type="text/css" href="./css/problem_add.css">
 </head>
 <body>
     <div class="container">

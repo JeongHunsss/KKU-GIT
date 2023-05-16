@@ -3,16 +3,16 @@
 <head>
     <title>KKU-GIT</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../bars/sidebar.css">
-    <link rel="stylesheet" type="text/css" href="../bars/topbar.css">
+    <link rel="stylesheet" type="text/css" href="../bars/css/side_bar.css">
+    <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 <body>
   <div class="sidebar">
-    <?php include '../bars/sidebar.php'; ?>
+    <?php include '../bars/side_bar.php'; ?>
   </div>
             
-  <?php include '../bars/topbar.php'; ?>
+  <?php include '../bars/top_bar.php'; ?>
 
     <h1>문제 풀기 페이지</h1>
     <div class="notice-wrapper">
