@@ -1,0 +1,65 @@
+/* 공지사항 디테일 페이지 스타일 */
+.header {
+    max-width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.notice {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px #ddd;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+
+.info {
+    text-align: right;
+    margin-left: auto;
+    border-bottom: 1px solid #ccc;
+}
+.date {
+    display: inline-block;
+    font-weight: bold;
+}
+.content {
+    margin-bottom: 20px;
+}
+
+.button{
+    text-align: right;
+}
+.edit-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+/* 취소 버튼 스타일 */
+.delete-button {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #ddd;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 session_start();
 
@@ -25,25 +26,25 @@ if (isset($_POST['login'])) {
 }
 ?>
 
+=======
+>>>>>>> 3bf37a1e9bf8ae535bec4677cb311a3db86b4601
 <!DOCTYPE html>
 <html>
 <head>
     <title>Login Page</title>
-    <link href="css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/login.css">
 </head>
 <body class="login-body">
 <form method="post" class="login-form">
     <h2>KKU-GIT 로그인</h2>
-    <?php if (isset($error)) { ?>
-        <p class="login-error"><?php echo $error; ?></p>
-    <?php } ?>
     <label class="login-label" for="user_id">아이디:</label>
     <input class="login-input" type="text" id="user_id" name="user_id" required>
     <label class="login-label" for="password">비밀번호:</label>
     <input class="login-input" type="password" id="password" name="password" required>
     <button class="login-button" type="submit" name="login">로그인</button>
     <div><hr style="border-width 1px; border-color:#ccc;"></div>
-    <button class="cancel-button" onclick="location.href='register.php'">회원가입</button>
+    <button class="cancel-button" onclick="location.href='joinpage.php'">회원가입</button>
 </form>
 </body>
 </html>
