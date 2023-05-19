@@ -5,9 +5,9 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 // 아래 코드는 상대 경로를 넣을 시 오류 남. 이유는 잘 모르겠음 변수를 이용해서 넣었으니 건들지 않아도 됨
-require $_SERVER['DOCUMENT_ROOT'].'/PHPMailer/src/Exception.php';  // PHPMailer/src/Exception.php 절대 경로 넣기
-require $_SERVER['DOCUMENT_ROOT'].'/PHPMailer/src/PHPMailer.php';  // PHPMailer/src/PHPMailer.php 절대 경로 넣기
-require $_SERVER['DOCUMENT_ROOT'].'/PHPMailer/src/SMTP.php';       // PHPMailer/src/SMTP.php 절대 경로 넣기
+require $_SERVER['DOCUMENT_ROOT'].'/KKU-GIT/config/PHPMailer/src/Exception.php';  // PHPMailer/src/Exception.php 절대 경로 넣기
+require $_SERVER['DOCUMENT_ROOT'].'/KKU-GIT/config/PHPMailer/src/PHPMailer.php';  // PHPMailer/src/PHPMailer.php 절대 경로 넣기
+require $_SERVER['DOCUMENT_ROOT'].'/KKU-GIT/config/PHPMailer/src/SMTP.php';       // PHPMailer/src/SMTP.php 절대 경로 넣기
 
 $mail = new PHPMailer(true);
 
