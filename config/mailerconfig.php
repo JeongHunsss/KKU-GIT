@@ -13,15 +13,15 @@ $mail = new PHPMailer(true);
 
 try {
     $mail->isSMTP();                                           
-    $mail->Host       = 'smtp.naver.com';                     //SMTP 서버 (ex> smtp.naver.com)
+    $mail->Host       = 'SMTP 서버 주소';                     //SMTP 서버 (ex> smtp.naver.com)
     $mail->SMTPAuth   = true;                                  
-    $mail->Username   = 'st01006@naver.com';                     //SMTP 아이디(example@example.com)
-    $mail->Password   = 'B83VHB9QPG66';                               //SMTP 비밀번호
+    $mail->Username   = '이메일 아이디';                     //SMTP 아이디(example@example.com)
+    $mail->Password   = 'SMTP 비밀번호';                               //SMTP 비밀번호
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;           
     $mail->Port       = 465;                                   
 
     //Recipients
-    $mail->setFrom('st01006@naver.com', 'KKU-GIT');         // Username과 동일하게
+    $mail->setFrom('이메일 아이디', 'KKU-GIT');         // Username과 동일하게
     $mail->addAddress($receiver_email);
 
     //Content
