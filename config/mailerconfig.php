@@ -32,7 +32,7 @@ try {
     $mail->CharSet = 'UTF-8'; // 인코딩 UTF-8로 설정
 
     $mail->send();
-    echo '<script>alert("메일을 성공적으로 보냈습니다!");</script>';
+    $isSend = 1;
 } catch (Exception $e) {
     echo '<script>alert("메일 전송에 실패했습니다. Mailer Error: ' . $mail->ErrorInfo . '");</script>';
 }
