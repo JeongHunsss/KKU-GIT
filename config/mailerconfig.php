@@ -5,23 +5,23 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 // 아래 코드는 상대 경로를 넣을 시 오류 남. 이유는 잘 모르겠음 변수를 이용해서 넣었으니 건들지 않아도 됨
-require $_SERVER['DOCUMENT_ROOT'].'/PHPMailer/src/Exception.php';  // PHPMailer/src/Exception.php 절대 경로 넣기
-require $_SERVER['DOCUMENT_ROOT'].'/PHPMailer/src/PHPMailer.php';  // PHPMailer/src/PHPMailer.php 절대 경로 넣기
-require $_SERVER['DOCUMENT_ROOT'].'/PHPMailer/src/SMTP.php';       // PHPMailer/src/SMTP.php 절대 경로 넣기
+require $_SERVER['DOCUMENT_ROOT'].'/KKU-GIT/config/PHPMailer/src/Exception.php';  // PHPMailer/src/Exception.php 절대 경로 넣기
+require $_SERVER['DOCUMENT_ROOT'].'/KKU-GIT/config/PHPMailer/src/PHPMailer.php';  // PHPMailer/src/PHPMailer.php 절대 경로 넣기
+require $_SERVER['DOCUMENT_ROOT'].'/KKU-GIT/config/PHPMailer/src/SMTP.php';       // PHPMailer/src/SMTP.php 절대 경로 넣기
 
 $mail = new PHPMailer(true);
 
 try {
     $mail->isSMTP();                                           
-    $mail->Host       = 'SMTP 서버 주소';                     //SMTP 서버 (ex> smtp.naver.com)
+    $mail->Host       = 'smtp.naver.com';                     //SMTP 서버 (ex> smtp.naver.com)
     $mail->SMTPAuth   = true;                                  
-    $mail->Username   = '이메일 아이디';                     //SMTP 아이디(example@example.com)
-    $mail->Password   = 'SMTP 비밀번호';                               //SMTP 비밀번호
+    $mail->Username   = 'st01006@naver.com';                     //SMTP 아이디(example@example.com)
+    $mail->Password   = 'B83VHB9QPG66';                               //SMTP 비밀번호
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;           
     $mail->Port       = 465;                                   
 
     //Recipients
-    $mail->setFrom('이메일 아이디', 'KKU-GIT');         // Username과 동일하게
+    $mail->setFrom('st01006@naver.com', 'KKU-GIT');         // Username과 동일하게
     $mail->addAddress($receiver_email);
 
     //Content
