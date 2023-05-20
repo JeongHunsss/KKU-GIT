@@ -10,27 +10,39 @@ $isSend = 0; // 메일 보내기 성공 여부
 
 // 회원가입
 if (isset($_POST['regist'])) {
-    if($_SESSION['isChecking'] === 1 and $_SESSION['is_duplication'] === 1){
-        $user_id = $_POST['user_id'];
-        $password = $_POST['password'];
-        $user_name = $_POST['user_name'];
+    $user_id = $_POST['user_id'];
+    $password = $_POST['password'];
+    $user_name = $_POST['user_name'];
+    if($user_id){
+        if($password){
+            if($user_name){
+                if($_SESSION['isChecking'] === 1 and $_SESSION['is_duplication'] === 1){
 
-        // 데이터베이스에 회원 정보 저장
-        $query = "INSERT INTO user (id, password, name) VALUES ('$user_id', '$password', '$user_name')";
-        mysqli_query($conn, $query);
+                    // 데이터베이스에 회원 정보 저장
+                    $query = "INSERT INTO user (id, password, name) VALUES ('$user_id', '$password', '$user_name')";
+                    mysqli_query($conn, $query);
 
-        // 세션변수 무작위로 변경
-        $code = rand(10000, 99999);
-        $_SESSION['verification_code'] = $code;
-        $_SESSION['is_duplication'] = $code;
-        $_SESSION['isChecking'] = $code;
+                    // 세션변수 무작위로 변경
+                    $code = rand(10000, 99999);
+                    $_SESSION['verification_code'] = $code;
+                    $_SESSION['is_duplication'] = $code;
+                    $_SESSION['isChecking'] = $code;
 
-        echo '<script>alert("회원가입이 완료되었습니다.");</script>';
-        // 회원가입 완료 후 홈페이지로 이동
-        echo '<script>window.location.href = "login.php";</script>';
-        exit(); // 페이지 이동 후 코드가 실행되는 것을 방지하기 위해 exit() 함수 사용
+                    echo '<script>alert("회원가입이 완료되었습니다.");</script>';
+                    // 회원가입 완료 후 홈페이지로 이동
+                    echo '<script>window.location.href = "login.php";</script>';
+                    exit(); // 페이지 이동 후 코드가 실행되는 것을 방지하기 위해 exit() 함수 사용
+                } else {
+                    echo '<script>alert("이메일 인증과 아이디 중복확인을 해야합니다.");</script>';
+                }
+            } else {
+                echo '<script>alert("이름을 입력해주세요.");</script>';
+            } 
+        } else {
+            echo '<script>alert("비밀번호를 입력해주세요.");</script>';
+        }
     } else {
-        echo '<script>alert("이메일 인증과 아이디 중복확인을 해야합니다.");</script>';
+        echo '<script>alert("아이디를 입력해주세요.");</script>';
     }
 }
 //취소 버튼 누를 시
