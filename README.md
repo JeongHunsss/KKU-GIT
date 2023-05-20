@@ -21,5 +21,6 @@ SMTP 설정 시 사용할 서버의 비밀번호 발급 받아야함
 7. mailerconfig.php 파일에서  
     $mail->Host = 'smtp.naver.com'                              
     $mail->Username   = '본인네이버아이디@naver.com'
+    
     $mail->Password   = '발급 받은 비밀번호'                                    
     $mail->setFrom('본인네이버아이디@naver.com(Username과 동일)', 'KKU-GIT')
