@@ -8,8 +8,3 @@
 	header('Location: '.$uri.'/KKU-GIT/login/login.php');
 	exit;
 ?>
-<<<<<<< HEAD
-Something is wrong with the XAMPP installation :-(
-	<!--- test10--->
-=======
->>>>>>> PJH

@@ -3,10 +3,13 @@
 <head>
     <h1>메인 페이지</h1>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../bars/css/side_bar.css">
+    <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 <body>
-<div class="notice-wrapper">
+    <h1>문제 풀기 페이지</h1>
+    <div class="notice-wrapper">
     <div class="notice-box">
         <h2>공지사항</h2>
         <table class="notice-table">
