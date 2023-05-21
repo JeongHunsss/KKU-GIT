@@ -1,89 +1,63 @@
 .notice-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
 }
 
 .notice-box {
-  border: 2px solid black;
-  border-radius: 30px;
-  background-color: #007bff;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  margin: 20px;
-  width: 50%; /* Added */
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: #e8e8e8;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 20px;
+    width: 45%;
 }
 
-.ranking-box {
-  border: 2px solid black;
-  border-radius: 30px;
-  background-color: #007bff;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  margin: 20px;
-  width: 50%; /* Added */
+.notice-box h2 {
+    color: black; /* 검정색 */
 }
-
-.recent-problem-box {
-  border: 2px solid black;
-  border-radius: 30px;
-  background-color: #007bff;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  margin: 20px;
-  width: 50%; /* Added */
-}
-
-
-
 .notice-table,
 .ranking-table,
 .recent-problem-table {
-  width: 100%;
+    width: 100%;
 }
 
 .notice-content-title {
-  text-align: center;
-  font-weight: bold;
-  font-size: 24px;
-  padding-top: 20px;
-  padding-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .transparent-table {
-  border-collapse: collapse;
-  width: 100%;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center; /* 가운데 정렬 */
 }
 
 .transparent-table th,
 .transparent-table td {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: center;
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
 }
 
 .transparent-table th {
-  background-color: #f2f2f2;
+    background-color: #f2f2f2;
 }
 
 .transparent-table tr:nth-child(even) {
-  background-color: #e8e8e8;
+    background-color: #e8e8e8;
 }
 
 .transparent-table tr:hover {
-  background-color: #d1d1d1;
-}
-
-.notice-table {
-  width: 100%;
-}
-
-.ranking-table {
-  width: 50%;
+    background-color: #d1d1d1;
 }
 
 .recent-problem-table {
-  width: 50%;
+    width: 100%;
+    table-layout: auto; /* 가로 간격 자동 조정 */
 }

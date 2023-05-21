@@ -1,196 +1,58 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
+
 .container {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.problem-header {
-    text-align: center;
-}
+
 .comment-list {
-    text-align: left;
+  text-align: left;
 }
 
 .comment-section {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .comment-list {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .comment-list ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .comment-list li {
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
 .comment-list .comment-author {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .comment-list .comment-date {
-    color: #999;
+  color: #999;
 }
 
 .comment-list .comment-content {
-    margin-top: 10px;
+  margin-top: 10px;
 }
-.quizregister-form {
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    }
-    .quizregister-form label {
-    display: block;
-    margin-bottom: 10px;
-    }
-    .quizregister-form label input[type="text"], .quizregister-form label textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid black;
-    resize: none;
-    }
-    .quizregister-form label input[type="radio"] {
-    margin-right: 10px;
-    }
-    .quizregister-form button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: green;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    }
-    .quizregister-form button[type="submit"] {
-    background-color: blue;
-    }
-    .quizregister-form button[type="reset"] {
-    background-color: gray;
-    }
-    .quizregister-form .quizregister-form-header {
-    margin-bottom: 30px;
-    width: 100%;
-    text-align: center;
-    }
-    .quizregister-form .quizregister-form-header h2 {
-    margin: 0;
-    }
-    .quizregister-form .quizregister-form-header p {
-    font-size: 14px;
-    }
-    
-    /* 구분선 스타일 */
-hr {
-    border-top: 1px solid #ccc;
-    margin-top: 50px;
-    margin-bottom: 50px;
+
+/* Additional styles to adjust the layout */
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
   }
-  
-  /* 제목 스타일 */
-  .problem-header h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  /* 문제 내용 스타일 */
-  .problem-content {
-    margin-bottom: 30px;
-  }
-  
-  .problem-content h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .problem-content p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  
-  /* 보기 부분 스타일 */
-  .problem-choices h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .problem-choices form label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .problem-choices form input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  /* 댓글 부분 스타일 */
-  .comment-section h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .comment-section form {
-    margin-bottom: 20px;
-  }
-  
-  .comment-section form label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .comment-section form input[type="text"], .comment-section form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .comment-list li {
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-    padding: 20px;
-  }
-  
-  .comment-list .comment-author {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .comment-list .comment-date {
-    color: #999;
-    font-size: 14px;
-  }
-  
-  .comment-list .comment-content {
-    font-size: 16px;
-    margin-top: 10px;
-  }
-  
+}
