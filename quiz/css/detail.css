@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .comment-list {
+    text-align: left;
+  }
+  
+  .comment-section {
+    margin-top: 50px;
+  }
+  
+  .comment-list {
+    margin-top: 20px;
+  }
+  
+  .comment-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .comment-list li {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .comment-list .comment-author {
+    font-weight: bold;
+  }
+  
+  .comment-list .comment-date {
+    color: #999;
+  }
+  
+  .comment-list .comment-content {
+    margin-top: 10px;
+  }
+  
+  /* Additional styles to adjust the layout */
+  @media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+  }
