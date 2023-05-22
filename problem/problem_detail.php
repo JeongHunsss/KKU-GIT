@@ -9,6 +9,12 @@
     <link rel="stylesheet" type="text/css" href="./css/problem_add.css">
 </head>
 <body>
+    <div class="sidebar">
+        <?php include '../bars/side_bar.php'; ?>
+    </div>
+            
+    <?php include '../bars/top_bar.php'; ?>
+        
     <div class="container">
         <h1>문제 풀기 페이지</h1>
         <div class="problem-header">

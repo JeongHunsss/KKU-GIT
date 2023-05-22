@@ -13,7 +13,7 @@
                 <?php include '../bars/side_bar.php'; ?>
             </div>
             
-                <?php include '../bars/top_bar.php'; ?>
+            <?php include '../bars/top_bar.php'; ?>
             
                 <div class="container">
                     <h1>마이페이지</h1>
