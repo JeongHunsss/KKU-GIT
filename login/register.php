@@ -4,8 +4,14 @@ session_start();
 include '../config/dbconfig.php';
 
 // 초기화
-
 $isSend = 0; // 메일 보내기 성공 여부
+if (!isset($_SESSION['is_duplication'])) {
+    $_SESSION['is_duplication'] = 0;
+}
+
+if (!isset($_SESSION['isChecking'])) {
+    $_SESSION['isChecking'] = 0;
+}
 
 
 // 회원가입
