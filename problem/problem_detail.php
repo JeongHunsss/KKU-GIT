@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="./css/quizregister.css">
 </head>
 <body>
-    
     <div class="container">
     <br><h3>문제 풀기 페이지</h3>
         <div class="problem-header">

@@ -14,6 +14,7 @@
     </div>
             
     <?php include '../bars/top_bar.php'; ?>
+    
     <div class="header">
 		<h1>공지사항</h1>
 		<div class="search-container">
