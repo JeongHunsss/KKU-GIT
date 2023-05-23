@@ -7,6 +7,10 @@
     padding: 0;
 }
 
+h2{
+  text-align: center;
+}
+
 .join-form {
     background-color: #f2f2f2;
     border-radius: 10px;
@@ -20,24 +24,40 @@
 }
 
 .join-label {
-    display: block;
-    margin-bottom: 10px;
+    display: inline-block;
+    /* margin-bottom: 10px; */
+    margin-right: 10px;
+    margin-bottom: 10px; 
+    /* display: block; */
   }
   
   .join-input {
+    margin-bottom: 10px;
     margin-left: 10px;
-    padding: 5px;
+    width: 160px;
+    height: 28px;
+    display: inline-block;
+    /* padding: 5px; */
     border: none;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+   
   }
 
-.duplicate-check-button,
+
 .verification-code-button,
-.verification-check-button,
-.join-button,
-.cancel-button {
-    background-color: #3434346a;
+.verification-check-button
+/* .join-button,
+.cancel-button  */{
+    background-color: blue;
+    text-align: center;
+    height: 30px;
     padding: 10px;
     border-radius: 5px;
     border: none;
@@ -45,48 +65,92 @@
     cursor: pointer;
     box-shadow: 0px 0px 5px rgba(89, 86, 86, 0.2);
     transition: background-color 0.2s ease;
+    margin-left: 10px;
+    display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.duplicate-check-button:hover,
-.verification-code-button:hover,
-.verification-check-button:hover,
-.join-button:hover,
-.cancel-button:hover {
-    background-color: blue;
+
+.input-group .join-input {
+  margin-right: 5px;
+  text-align: center;
 }
 
-.verification-code-button,
+.mail {
+  position: relative;
+  display: flex;
+  height: 100%;
+  bottom: 5px;;
+  vertical-align: middle;
+}
+
+.input-group .verification-code-button {
+  margin-left: 10px;
+  align-self: flex-start;
+}
+
+.input-group .verification-check-button {
+  margin-left: 10px;
+  align-self: flex-start;
+}
+
+
+
+.duplicate-check-button{
+  background-color: rgb(237, 147, 57);
+  padding: 10px;
+  width: 75px;
+  height: 30px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(89, 86, 86, 0.2);
+    transition: background-color 0.2s ease;
+    margin-left: 10px;
+    display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .verification-code-button,
 .verification-check-button {
   margin-left: 10px;
-  padding: 5px;
-  border: none;
+  /* padding: 5px; */
+  /* border: none;
   border-radius: 5px;
   background-color: blue;
   color: white;
   cursor: pointer;
-}
+}  */
 
-.duplicate-check-button {
+/* .duplicate-check-button {
     padding: 10px;
     border: none;
     border-radius: 5px;
     background-color: blue;
     color: white;
     cursor: pointer;
-  }
-.input-group {
+  } */
+
+  .button-group {
     display: flex;
+     justify-content: center;
+    /* margin-top: 20px;  */
     align-items: center;
   }
 
 
-  .button-group {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  .button-space {
+    /* margin-left: 10px; */
+    width: 10px;
   }
 
+  .isOK{
+    color: blue;
+  }
 
-  .button-space {
-    margin-left: 10px;
+  .isNotOK{
+    color: red;
   }
