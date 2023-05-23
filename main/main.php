@@ -15,7 +15,6 @@
         }
 
         .sidebar {
-            position: fixed;
             top: 0;
             left: 0;
             width: 200px;
@@ -27,9 +26,7 @@
             top: 0;
             left: 200px;
             width: calc(100% - 200px);
-            background-color: #f2f2f2;
             padding: 10px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .content-wrapper {
@@ -44,10 +41,8 @@
         .notice-box,
         .rank-box,
         .recent-problem-box {
-            border: 2px solid black;
+            border: 1px solid black;
             border-radius: 10px;
-            background-color: #e8e8e8;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
             padding: 20px;
             margin-bottom: 20px;
             width: 100%;
@@ -87,17 +82,6 @@
             text-align: center;
         }
 
-        .transparent-table th {
-            background-color: #f2f2f2;
-        }
-
-        .transparent-table tr:nth-child(even) {
-            background-color: #e8e8e8;
-        }
-
-        .transparent-table tr:hover {
-            background-color: #d1d1d1;
-        }
 
         .recent-problem-table {
             width: 100%;
@@ -117,7 +101,6 @@
     <br><br><br>
 
     <div class="content-wrapper">
-        <h1 style="text-align: center;">문제 풀기 페이지</h1>
 
         <div class="notice-box">
             <h2>공지사항</h2>
@@ -178,12 +161,12 @@
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>간미연 (골드)</td>
+                        <td>유지민 (골드)</td>
                         <td>1000</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>유지민 (실버)</td>
+                        <td>이지은 (실버)</td>
                         <td>900</td>
                     </tr>
                     <tr>
@@ -198,7 +181,7 @@
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>김창섭 (브론즈)</td>
+                        <td>박정훈 (브론즈)</td>
                         <td>600</td>
                     </tr>
                 </tbody>

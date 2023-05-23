@@ -5,27 +5,11 @@ body {
     justify-content: center;
 }
 
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px; /* 적절한 너비로 조정 */
-    height: 100vh;
-}
-
-.top-bar {
-    position: fixed;
-    top: 0;
-    left: 200px; /* sidebar의 너비에 맞춰 조정 */
-    width: calc(100% - 200px); /* sidebar의 너비를 빼고 나머지 공간으로 설정 */
-}
-
 .notice-wrapper {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: calc(100vh - 20px); /* sidebar의 높이를 고려하여 조정 */
-    margin-top: 20px; /* topbar의 높이만큼 여백 추가 */
+    height: 100vh;
 }
 
 .notice-box {
@@ -35,7 +19,7 @@ body {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     padding: 40px;
     margin: 20px;
-    width: 45%;
+    width: 40%;
 }
 
 .notice-box h2 {
