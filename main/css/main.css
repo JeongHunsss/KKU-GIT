@@ -1,8 +1,31 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* 적절한 너비로 조정 */
+    height: 100vh;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 200px; /* sidebar의 너비에 맞춰 조정 */
+    width: calc(100% - 200px); /* sidebar의 너비를 빼고 나머지 공간으로 설정 */
+}
+
 .notice-wrapper {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 100vh;
+    height: calc(100vh - 20px); /* sidebar의 높이를 고려하여 조정 */
+    margin-top: 20px; /* topbar의 높이만큼 여백 추가 */
 }
 
 .notice-box {
@@ -16,8 +39,9 @@
 }
 
 .notice-box h2 {
-    color: black; /* 검정색 */
+    color: black;
 }
+
 .notice-table,
 .ranking-table,
 .recent-problem-table {
@@ -35,7 +59,7 @@
 .transparent-table {
     border-collapse: collapse;
     width: 100%;
-    text-align: center; /* 가운데 정렬 */
+    text-align: center;
 }
 
 .transparent-table th,
@@ -59,5 +83,5 @@
 
 .recent-problem-table {
     width: 100%;
-    table-layout: auto; /* 가로 간격 자동 조정 */
+    table-layout: auto;
 }
