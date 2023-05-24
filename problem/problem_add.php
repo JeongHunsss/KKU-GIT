@@ -90,6 +90,7 @@
             <?php include '../bars/top_bar.php'; ?>
         </div>
 
+
         <div class="content">
             <div class="content-body">
                 <h1>문제 등록</h1>
