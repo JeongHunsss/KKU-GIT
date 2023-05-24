@@ -67,12 +67,19 @@
             margin-top: 20px;
         }
         
+        .pagination-box {
+            display: flex;
+            align-items: center;
+        }
+        
         .pagination-box a {
+            display: inline-block;
             border: 1px solid black;
             margin: 0 5px;
             padding: 5px;
             color: black;
             text-decoration: none;
+            transition: background-color 0.3s;
         }
         
         .pagination-box a:hover {
@@ -100,14 +107,14 @@
 </head>
 <body>
     <div class="container">
-        <div class="sidebar">
-            <?php include '../bars/side_bar.php'; ?>
-        </div>
-                
         <div class="top-bar">
             <?php include '../bars/top_bar.php'; ?>
         </div>
-
+        
+        <div class="sidebar">
+            <?php include '../bars/side_bar.php'; ?>
+        </div>
+        
         <div class="content">
             <br><br><br>
             <form method="get" action="" class="search-form">
@@ -177,9 +184,9 @@
             
             <div class="pagination">
                 <div class="pagination-box">
-                    <a href="#"><<</a>
-                    <a href="#"><</a>
-                    <a href="#">1</a>
+                    <a href="#" class="disabled"><<</a>
+                    <a href="#" class="disabled"><</a>
+                    <a href="#" class="active">1</a>
                     <a href="#">2</a>
                     <a href="#">3</a>
                     <a href="#">4</a>
