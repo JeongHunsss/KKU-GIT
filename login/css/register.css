@@ -149,8 +149,16 @@ h2{
 
   .isOK{
     color: blue;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
   }
 
   .isNotOK{
     color: red;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
   }

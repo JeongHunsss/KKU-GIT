@@ -112,20 +112,24 @@ if (isset($_POST['code_check'])) {
             <input class="join-input" type="text" id="user_name" name="user_name" 
                 value="<?php echo isset($_POST['user_name']) ? $_POST['user_name'] : ''; ?>">
                 
-        <label class="join-label" for="user_id">아이디</label>
+      
+                <label class="join-label" for="user_id">아이디
+                    <?php
+                        if($_SESSION['is_duplication'] === 1){
+                            echo "<div class='isOK' >사용 가능한 아이디입니다!</div>";
+                        } else if($_SESSION['is_duplication'] === 2){
+                            echo "<div class='isNotOK' >아이디가 존재합니다.</div>";
+                        }
+                    ?>
+                </label>
+        
         <div class="input-group">
             <input class="join-input" type="text" id="user_id" name="user_id" 
                 value="<?php echo isset($_POST['user_id']) ? $_POST['user_id'] : ''; ?>">
             <button class="verification-code-button" name="duplication_verify">중복확인</button>
         </div>
         
-        <?php
-            if($_SESSION['is_duplication'] === 1){
-                echo "<div class='isOK'>사용 가능한 아이디입니다!</div>";
-            } else if($_SESSION['is_duplication'] === 2){
-                echo "<div class='isNotOK'>아이디가 존재 합니다.</div>";
-            }
-        ?>
+
 
         <!-- <br> -->
         <label class="join-label" for="password">비밀번호 </label>
@@ -133,31 +137,38 @@ if (isset($_POST['code_check'])) {
                 value="<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>">
         
 
-        <label class="join-label" for="email">이메일</label>
+        <label class="join-label" for="email">이메일
+            <?php
+            if($isSend === 1)
+                echo "<div class='isOK'> 이메일을 보냈습니다 </div>"
+            ?>
+        </label>
         <div class="input-group">
              <input class="join-input" type="text" id="email" name="email" 
                 value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>"><span class="mail">@kku.ac.kr</span>
             <button class="verification-code-button" name = "email_send">인증코드 받기</button>
         </div>
 
-        <?php
-        if($isSend === 1)
-            echo "<div class='isOK'> 이메일을 보냈습니다 </div>"
-        ?>
+       
 
         
-        <label class="join-label" for="verification_code">인증코드</label>
+        <label class="join-label" for="verification_code">인증코드
+            <?php
+                if($_SESSION['isChecking'] === 2){
+                    echo "<div class='isNotOK'>인증코드가 일치하지 않습니다.</div>";
+                }
+                // else{
+                //     echo " <div class='isOK'>이메일 인증이 되었습니다.<div>";
+                // }
+            ?>
+        </label>
         <div class="input-group">
              <input class="join-input" type="text" id="verification_code" name="verification_code"
-                 value="<?php if($_SESSION['isChecking'] === 1){echo " <div class='isOK'>이메일 인증이 되었습니다.</div>";} ?>">
+                 value="<?php if($_SESSION['isChecking'] === 1){echo " 이메일 인증이 되었습니다.";} ?>">
             <button class="verification-check-button" name="code_check">확인</button>
         </div>
 
-        <?php
-            if($_SESSION['isChecking'] === 2){
-                echo "<div class='isNotOK'>인증코드가 일치하지 않습니다.</div>";
-            }
-        ?>
+        
 
         <div class="button-group">
             <button class="verification-check-button" type="submit" name="regist">회원가입</button>
