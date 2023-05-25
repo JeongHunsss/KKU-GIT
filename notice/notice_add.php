@@ -3,15 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>공지사항 글쓰기</title>
-<<<<<<< HEAD:notice/notice_write.php
-    <link rel="stylesheet" type="text/css" href="../sidebar.css">
-    <link rel="stylesheet" type="text/css" href="../header.css">
-    <link rel="stylesheet" type="text/css" href="./css/notice_write.css">
-</head>
-<body>
-    <div class="sidebar">
-        <?php include '../sidebar.php'; ?>
-=======
     <link rel="stylesheet" type="text/css" href="../bars/css/side_bar.css">
     <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
     <link rel="stylesheet" type="text/css" href="./css/notice_add.css">
@@ -25,7 +16,6 @@
 
     <div class="header">
 	    <h1>공지사항 글쓰기</h1>
->>>>>>> 76537d27912d612d1ff05c3fd78892fa7c56e9bf:notice/notice_add.php
     </div>
     <div class="header-wrapper">
         <?php include '../header.php'; ?>

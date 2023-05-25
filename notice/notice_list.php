@@ -4,32 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>공지사항</title>
-<<<<<<< HEAD:notice/notice.php
-    <link rel="stylesheet" type="text/css" href="../sidebar.css">
-    <link rel="stylesheet" type="text/css" href="../header.css">
-    <link rel="stylesheet" type="text/css" href="./css/notice.css">
-</head>
-<body>
-    <div class="sidebar">
-        <?php include '../sidebar.php'; ?>
-    </div>
-    <div class="header-wrapper">
-        <?php include '../header.php'; ?>
-        <hr class="my-hr">
-    </div>
-
-    <div class="cont">
-        <div class="header">
-            <h1>공지사항</h1>
-            <div class="search-container">
-                <form method="get" action="">
-                    <input type="text" name="search" placeholder="제목 검색">
-                    <button type="submit">검색</button>
-                </form>
-                <div class="write-btn">
-                    <a href="notice_write.php" class="write-button">글쓰기</a>
-                </div>
-=======
     <link rel="stylesheet" type="text/css" href="../bars/css/side_bar.css">
     <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
     <link rel="stylesheet" type="text/css" href="./css/notice_list.css">
@@ -50,7 +24,6 @@
 			</form>
             <div class="write-btn">
                 <a href="notice_add.php" class="write-button">글쓰기</a>
->>>>>>> 76537d27912d612d1ff05c3fd78892fa7c56e9bf:notice/notice_list.php
             </div>
         </div>
     

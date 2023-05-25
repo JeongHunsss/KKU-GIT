@@ -8,14 +8,6 @@
     background-color: #ddd;
     z-index: 0;
   }
-  .header-wrapper {
-    position: fixed;
-    top: 10px;
-    left: 0;
-    width: 83%;
-    z-index: 999;
-    margin-left: 200px;
-  }
   .cont{
     position: fixed;
   top: 70px; /* header 요소와 같은 높이로 설정합니다. */

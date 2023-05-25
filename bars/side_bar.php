@@ -11,15 +11,10 @@
     <div class="sidebar">
         <h2>KKU-GIT</h2>
         <a href="../main/main.php"><i class="material-icons">home</i></a>
-        <hr>
         <a href="../my_info/my_page.php">마이페이지</a>
-        <hr>
         <a href="../notice/notice_list.php">공지사항</a>
-        <hr>
         <a href="../problem/problem_add.php">문제 등록</a>
-        <hr>
         <a href="../problem/problem_list.php">문제 리스트</a>
-        <hr>
     </div>    
     
   </body>

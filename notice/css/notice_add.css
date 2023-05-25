@@ -8,14 +8,7 @@
     background-color: #ddd;
     z-index: 0;
   }
-  .header-wrapper {
-    position: fixed;
-    top: 10px;
-    left: 0;
-    width: 83%;
-    z-index: 999;
-    margin-left: 200px;
-  }
+
   .cont{
     /* margin-left: 200px; */
     position: fixed;

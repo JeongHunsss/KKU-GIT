@@ -12,15 +12,8 @@
             <div class="sidebar">
                 <?php include '../bars/side_bar.php'; ?>
             </div>
-<<<<<<< HEAD:mypage/re_problem.php
-            <div class="header-wrapper">
-                <?php include '../header.php'; ?>
-=======
-            <header>
                 <?php include '../bars/top_bar.php'; ?>
->>>>>>> 76537d27912d612d1ff05c3fd78892fa7c56e9bf:my_info/re_problem.php
-                <hr class="my-hr">
-            </div>
+            
             
                 <div class="title">
                     <h1>등록 문제 내역</h1>
