@@ -29,7 +29,7 @@ if (isset($_POST['regist'])) {
                     mysqli_query($conn, $query);
 
                     // 세션변수 무작위로 변경
-                    $code = rand(10000, 99999);
+                    $code = rand(100000, 999999);
                     $_SESSION['verification_code'] = $code;
                     $_SESSION['is_duplication'] = $code;
                     $_SESSION['isChecking'] = $code;
@@ -54,7 +54,7 @@ if (isset($_POST['regist'])) {
 //취소 버튼 누를 시
 if (isset($_POST['cancel'])) {
     // 세션변수 무작위로 변경
-    $code = rand(10000, 99999);
+    $code = rand(100000, 999999);
     $_SESSION['verification_code'] = $code;
     $_SESSION['is_duplication'] = $code;
     $_SESSION['isChecking'] = $code;
