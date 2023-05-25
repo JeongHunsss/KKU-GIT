@@ -14,9 +14,6 @@
 
     <?php include '../bars/top_bar.php'; ?>
 
-
-    <br><br><br>
-
     <div class="content-wrapper">
 
         <div class="notice-box">
