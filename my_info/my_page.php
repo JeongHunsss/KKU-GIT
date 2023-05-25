@@ -12,9 +12,16 @@
             <div class="sidebar">
                 <?php include '../bars/side_bar.php'; ?>
             </div>
+<<<<<<< HEAD:mypage/mypage.php
+            <div class="header-wrapper">
+                <?php include '../header.php'; ?>
+                <hr class="my-hr">
+            </div>
+=======
             
             <?php include '../bars/top_bar.php'; ?>
             
+>>>>>>> 76537d27912d612d1ff05c3fd78892fa7c56e9bf:my_info/my_page.php
                 <div class="container">
                     <h1>마이페이지</h1>
                     <!-- <hr class="my-hr"> -->

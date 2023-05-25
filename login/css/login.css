@@ -8,6 +8,10 @@
     padding: 0;
 }
 
+h2{
+    text-align: center;
+}
+
 .login-form {
     background-color: #f2f2f2;
     border-radius: 10px;
