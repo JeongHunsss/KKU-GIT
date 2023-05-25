@@ -5,24 +5,43 @@ body {
     justify-content: center;
 }
 
-.notice-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+.sidebar {
+    top: 0;
+    left: 0;
+    width: 200px;
     height: 100vh;
 }
 
-.notice-box {
-    border: 2px solid black;
-    border-radius: 30px;
-    background-color: #e8e8e8;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    margin: 20px;
-    width: 40%;
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 200px;
+    width: calc(100% - 200px);
+    padding: 10px;
 }
 
-.notice-box h2 {
+.content-wrapper {
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.notice-box,
+.rank-box,
+.recent-problem-box {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.notice-box h2,
+.rank-box h2,
+.recent-problem-box h2 {
     color: black;
 }
 
@@ -30,14 +49,15 @@ body {
 .ranking-table,
 .recent-problem-table {
     width: 100%;
+    margin-top: 10px;
 }
 
 .notice-content-title {
     text-align: center;
     font-weight: bold;
     font-size: 24px;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 .transparent-table {
@@ -53,17 +73,6 @@ body {
     text-align: center;
 }
 
-.transparent-table th {
-    background-color: #f2f2f2;
-}
-
-.transparent-table tr:nth-child(even) {
-    background-color: #e8e8e8;
-}
-
-.transparent-table tr:hover {
-    background-color: #d1d1d1;
-}
 
 .recent-problem-table {
     width: 100%;

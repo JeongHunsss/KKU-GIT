@@ -6,97 +6,14 @@
     <link rel="stylesheet" type="text/css" href="../bars/css/side_bar.css">
     <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .sidebar {
-            top: 0;
-            left: 0;
-            width: 200px;
-            height: 100vh;
-        }
-
-        .top-bar {
-            position: fixed;
-            top: 0;
-            left: 200px;
-            width: calc(100% - 200px);
-            padding: 10px;
-        }
-
-        .content-wrapper {
-            margin-left: 200px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 20px;
-        }
-
-        .notice-box,
-        .rank-box,
-        .recent-problem-box {
-            border: 1px solid black;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            width: 100%;
-        }
-
-        .notice-box h2,
-        .rank-box h2,
-        .recent-problem-box h2 {
-            color: black;
-        }
-
-        .notice-table,
-        .ranking-table,
-        .recent-problem-table {
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        .notice-content-title {
-            text-align: center;
-            font-weight: bold;
-            font-size: 24px;
-            padding-top: 10px;
-            padding-bottom: 5px;
-        }
-
-        .transparent-table {
-            border-collapse: collapse;
-            width: 100%;
-            text-align: center;
-        }
-
-        .transparent-table th,
-        .transparent-table td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: center;
-        }
-
-
-        .recent-problem-table {
-            width: 100%;
-            table-layout: auto;
-        }
-    </style>
 </head>
 <body>
     <div class="sidebar">
         <?php include '../bars/side_bar.php'; ?>
     </div>
 
-    <div class="top-bar">
-        <?php include '../bars/top_bar.php'; ?>
-    </div>
+    <?php include '../bars/top_bar.php'; ?>
+
 
     <br><br><br>
 
