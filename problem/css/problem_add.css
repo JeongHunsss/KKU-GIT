@@ -1,3 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    flex: 0 0 200px;
+}
+
+.content {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
 form {
     margin: 30px;
 }
@@ -11,7 +31,7 @@ input[type="submit"],
 input[type="button"] {
     display: inline-block;
     margin-top: 20px;
-    margin-right: 2px;
+    margin-right: 20px;
     padding: 10px 20px;
     background-color: blue; 
     color: white;
@@ -21,22 +41,32 @@ input[type="button"] {
     float: right;
 }
 
-input[type="submit"] {
-    margin-right: 10px;
-}
-
 input[type="text"] {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 20px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
 
-/* 추가된 부분 */
+textarea {
+    display: block;
+    margin-right: 20px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    resize: vertical;
+}
+
 h1 {
     text-align: center;
     color: blue;
 }
 
-body {
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
+.content-body {
+    margin-left: 40pt;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }

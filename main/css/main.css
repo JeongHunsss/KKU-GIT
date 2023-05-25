@@ -1,24 +1,71 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .notice-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
-  }
-  
-.notice-box {
-  border: 2px solid black;
-  border-radius: 30px;
-  background-color: #f2f2f2;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 40px;
 }
 
-  
-  .notice-content-title {
+.notice-box {
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: #e8e8e8;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 20px;
+    width: 40%;
+}
+
+.notice-box h2 {
+    color: black;
+}
+
+.notice-table,
+.ranking-table,
+.recent-problem-table {
+    width: 100%;
+}
+
+.notice-content-title {
     text-align: center;
     font-weight: bold;
     font-size: 24px;
     padding-top: 20px;
     padding-bottom: 10px;
-  }
-  
+}
+
+.transparent-table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.transparent-table th,
+.transparent-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.transparent-table th {
+    background-color: #f2f2f2;
+}
+
+.transparent-table tr:nth-child(even) {
+    background-color: #e8e8e8;
+}
+
+.transparent-table tr:hover {
+    background-color: #d1d1d1;
+}
+
+.recent-problem-table {
+    width: 100%;
+    table-layout: auto;
+}
