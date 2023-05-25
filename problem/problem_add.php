@@ -6,89 +6,15 @@
     <link rel="stylesheet" type="text/css" href="../bars/css/side_bar.css">
     <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
     <link rel="stylesheet" type="text/css" href="./css/problem_add.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: white;
-            font-family: Arial, sans-serif;
-        }
-        
-        .container {
-            display: flex;
-        }
-        
-        .sidebar {
-            flex: 0 0 200px;
-        }
-        
-        .content {
-            flex-grow: 1;
-            margin-left: 20px;
-        }
-
-        form {
-            margin: 30px;
-        }
-
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-
-        input[type="submit"],
-        input[type="button"] {
-            display: inline-block;
-            margin-top: 20px;
-            margin-right: 20px;
-            padding: 10px 20px;
-            background-color: blue; 
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            float: right;
-        }
-
-        input[type="text"] {
-            display: inline-block;
-            margin-right: 20px;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-
-        textarea {
-            display: block;
-            margin-right: 20px;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            resize: vertical;
-        }
-
-        h1 {
-            text-align: center;
-            color: blue;
-        }
-
-        .content-body {
-            margin-left: 40pt;
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
         <div class="sidebar">
             <?php include '../bars/side_bar.php'; ?>
         </div>
-                
-        <div class="top-bar">
-            <?php include '../bars/top_bar.php'; ?>
-        </div>
+
+        <?php include '../bars/top_bar.php'; ?>
+
 
 
         <div class="content">

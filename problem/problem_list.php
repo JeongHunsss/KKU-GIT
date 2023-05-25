@@ -5,115 +5,14 @@
     <link rel="stylesheet" type="text/css" href="../bars/css/side_bar.css">
     <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
     <link rel="stylesheet" type="text/css" href="./css/problem_list.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            display: flex;
-        }
-
-        .sidebar {
-            flex: 0 0 200px;
-        }
-        
-        .content {
-            flex-grow: 1;
-            margin-left: 20pt;
-        }
-        
-        form.search-form {
-            margin-top: 20pt;
-            margin-left: 160pt;
-            text-align: left;
-        }
-        
-        table {
-            margin-top: 20px;
-            max-width: 80%;
-            border-collapse: collapse;
-            margin-left: 170pt;
-            margin-right: 20pt;
-        }
-        
-        th, td {
-            border: 1px solid #dee2e6;
-            padding: 10px;
-            text-align: center;
-        }
-        
-        th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
-        
-        th:first-child,
-        td:first-child {
-            border-left: 1px solid #dee2e6;
-        }
-        
-        th:last-child,
-        td:last-child {
-            border-right: 1px solid #dee2e6;
-        }
-        
-        .pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        
-        .pagination-box {
-            display: flex;
-            align-items: center;
-        }
-        
-        .pagination-box a {
-            display: inline-block;
-            border: 1px solid black;
-            margin: 0 5px;
-            padding: 5px;
-            color: black;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        
-        .pagination-box a:hover {
-            background-color: #f2f2f2;
-        }
-        
-        .pagination-box .active {
-            background-color: #007bff;
-            color: white;
-        }
-        
-        .pagination-box .disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-        
-        .top-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 999;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
-        <div class="top-bar">
-            <?php include '../bars/top_bar.php'; ?>
-        </div>
-        
         <div class="sidebar">
             <?php include '../bars/side_bar.php'; ?>
         </div>
+
+        <?php include '../bars/top_bar.php'; ?>
         
         <div class="content">
             <br><br><br>
