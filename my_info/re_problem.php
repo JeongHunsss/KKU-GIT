@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $_SESSION['cur_page'] = 'my_page';
+?>
 <!DOCTYPE html>
 <html>
     <head>

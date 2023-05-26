@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $_SESSION['cur_page'] = 'notice';
+?>
 
 <!DOCTYPE html>
 <html>
@@ -8,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="./css/notice_list.css">
 </head>
 <?php include '../bars/top_bar.php'; ?>
-
 <body>      
     <div class="header">
 		<h1>공지사항</h1>

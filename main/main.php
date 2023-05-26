@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $_SESSION['cur_page'] = 'main';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +13,6 @@
 <?php include '../bars/top_bar.php'; ?>
 <body class="main_body">
     <div class="content-wrapper">
-
         <div class="notice-box">
             <h2>공지사항</h2>
             <table class="notice-table">

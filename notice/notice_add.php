@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $_SESSION['cur_page'] = 'notice';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

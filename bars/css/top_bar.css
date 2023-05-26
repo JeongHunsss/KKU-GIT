@@ -13,41 +13,48 @@
   width: 100%;
 }
 
+.logo{
+  margin-left: 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+.logo h2 {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.logo:not(:last-child),
+.link:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.logo:hover,
+.link:hover {
+  color: rgb(253, 195, 108);
+}
+
 .menu {
   display: flex;
   align-items: center;
 }
 
-.menu a {
+.link{
+  width: 100px;
   margin-left: 0.5rem;
   margin-right: 1rem;
   color: white;
   text-decoration: none;
+  text-align: center;
 }
 
-.menu h2 {
-  margin-right: 0.5rem;
-  font-size: 1.2rem;
-}
-
-.menu a:not(:last-child) {
-  margin-right: 3rem;
-}
-
-.menu a:hover {
-  color: rgb(253, 195, 108);
-}
-
-.navi {
-  margin-left: 3rem;
-}
 
 .user-info {
   text-align: right;
   color: white;
 }
 
-strong {
+.strong-name {
   color: rgb(253, 195, 108);
 }
 
@@ -74,6 +81,9 @@ strong {
   background-color: rgb(195, 194, 194);
 }
 
+.current-page {
+  color: rgb(253, 195, 108);
+}
 
 /* Media queries for responsive behavior */
 
@@ -84,18 +94,14 @@ strong {
     min-width: 50%;
   }
 
-  .menu h2 {
+  .logo h2 {
     font-size: 1.2rem;
     margin-right: 0;
   }
 
-  .menu a:not(:last-child) {
+  .logo:not(:last-child),
+  .link:not(:last-child) {
     margin-right: 1.5rem;
-  }
-
-  .navi {
-    margin-left: 0;
-    margin-top: 0.5rem;
   }
 
   .user-info {

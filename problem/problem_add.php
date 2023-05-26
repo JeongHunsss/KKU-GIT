@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $_SESSION['cur_page'] = 'problem_add';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +18,9 @@
         <div class="content">
             <div class="content-body">
                 <h1>문제 등록</h1>
+                <?php
+                    echo "<div>".$_SESSION['cur_page']."</div>";
+                    ?>
                 <form method="post" action="submit.php">
 
                     <label for="subject">과목 <input type="text" name="subject" id="subject" required></label><br><br>

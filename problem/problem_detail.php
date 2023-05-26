@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $_SESSION['cur_page'] = 'problem_list';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
