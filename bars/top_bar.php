@@ -4,7 +4,8 @@
 
 <!DOCTYPE html>
 <html>
-<header>
+
+<body class="top_body">
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./css/top_bar.css">
     <title>topbar</title>
@@ -24,6 +25,6 @@
             <a href="../login/login.php" class="logout-btn">로그아웃</a>
         </div>
     </div>
-</header>
+</body>
 
 </html>

@@ -3,17 +3,11 @@
 <head>
     <title>KKU-GIT</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../bars/css/side_bar.css">
     <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
-<body>
-    <div class="sidebar">
-        <?php include '../bars/side_bar.php'; ?>
-    </div>
-
-    <?php include '../bars/top_bar.php'; ?>
-
+<?php include '../bars/top_bar.php'; ?>
+<body class="main_body">
     <div class="content-wrapper">
 
         <div class="notice-box">
