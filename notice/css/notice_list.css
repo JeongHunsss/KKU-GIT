@@ -1,115 +1,119 @@
 .my-hr {
     border-top: 1px solid black;
     position: absolute;
-    top: 100%; /* 헤더 바로 아래에 배치 */
+    top: 100%; /* Positioned right below the header */
     left: 0;
     width: 100%;
     height: 1px;
     background-color: #ddd;
     z-index: 0;
   }
-  .cont{
+  
+  .cont {
     position: fixed;
-  top: 70px; /* header 요소와 같은 높이로 설정합니다. */
-  left: 210px;
-  width: 83%;
-  height: calc(100% - 100px); /* 화면 전체 높이에서 header 요소의 높이를 뺍니다. */
-  overflow-y: scroll;
-} 
-
-.header h1 {
-    /* margin-left: 30px;
-    margin-top: 20px; */
-    max-width: 800px;
-    padding: 20px;
-    margin: 0 10px;
-}
-/*--------------제목 검색--------------*/
-.search-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: auto;
-        margin-bottom: 20px;
-}
-.search-container form {
-        display: flex;
-        align-items: center;
-        flex-grow: 1;
-}
-.search-container form input[type="text"] {
-    width: 300px;
-    height: 30px;
-    font-size: 16px;
-    margin-right: 10px;
-    margin-left: 30px;
-    padding: 5px;
-}
-.search-container form button[type="submit"] {
-    padding: 12px 24px;
-    font-size: 16px;
+    top: 4.375rem; /* Same height as the header element */
+    left: 13.125rem;
+    width: 83%;
+    height: calc(100% - 6.25rem); /* Subtract the height of the header element from the full screen height */
+    overflow-y: scroll;
+  }
+  
+  .header h1 {
+    max-width: 50rem;
+    padding: 1.25rem;
+    margin: 0 0.625rem;
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    margin-bottom: 1.25rem;
+  }
+  
+  .search-container form {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .search-container form input[type="text"] {
+    width: 18.75rem;
+    height: 1.875rem;
+    font-size: 1rem;
+    margin-right: 0.625rem;
+    margin-left: 1.875rem;
+    padding: 0.3125rem;
+  }
+  
+  .search-container form button[type="submit"] {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     cursor: pointer;
     text-decoration: none;
-}
-/*----글쓰기 버튼----*/
-.write-btn {
+  }
+  
+  .write-btn {
     margin-left: auto;
-    margin-right:auto;
-}
-.write-button {
-  display: inline-block;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-}
-/*---공지사항 리스트----*/
-table {
+    margin-right: auto;
+  }
+  
+  .write-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    margin-right: auto; 
+    margin-top: 1.25rem;
+    margin-right: auto;
     margin-left: auto;
-}
-th, td {
-    padding: 10px;
+  }
+  
+  th, td {
+    padding: 0.625rem;
     text-align: center;
-}
-th {
+  }
+  
+  th {
     background-color: #f2f2f2;
-}
-
-/*--페이지네이션--*/
-.pagination {
+  }
+  
+  .pagination {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-}
-
-.pagination a {
+    margin-top: 1.25rem;
+  }
+  
+  .pagination a {
     color: black;
     float: left;
-    padding: 8px 16px;
+    padding: 0.5rem 1rem;
     text-decoration: none;
-    transition: background-color .3s;
-}
-
-.pagination a.active {
+    transition: background-color 0.3s;
+  }
+  
+  .pagination a.active {
     background-color: #4CAF50;
     color: white;
     border: 1px solid #4CAF50;
-}
-
-.pagination a:hover:not(.active) {
+  }
+  
+  .pagination a:hover:not(.active) {
     background-color: #ddd;
-}
-
+  }
+  

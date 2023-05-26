@@ -1,8 +1,7 @@
-
-body{
+.top_body {
   padding: 0;
   margin: 0;
-  
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .top-bar {
@@ -10,6 +9,8 @@ body{
   justify-content: space-between;
   align-items: center;
   background-color: rgb(58, 110, 224);
+  padding: 0.3rem;
+  width: 100%;
 }
 
 .menu {
@@ -18,38 +19,40 @@ body{
 }
 
 .menu a {
-  margin-left: 20px;
-  margin-right: 70px;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
   color: white;
   text-decoration: none;
 }
 
 .menu h2 {
-  margin-right: 20px;
-  font-size: 23px;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .menu a:not(:last-child) {
-  margin-right: 100px;
+  margin-right: 3rem;
 }
 
 .menu a:hover {
   color: rgb(253, 195, 108);
 }
-.navi{
 
-  margin-left: 100px;
+.navi {
+  margin-left: 3rem;
 }
+
 .user-info {
   text-align: right;
   color: white;
 }
-strong{
-  color:rgb(253, 195, 108);
+
+strong {
+  color: rgb(253, 195, 108);
 }
 
 .user-info a {
-  margin-left: 10px;
+  margin-left: 0.5rem;
   text-decoration: none;
 }
 
@@ -57,12 +60,12 @@ strong{
   background-color: #f1f1f1;
   color: black;
   border: none;
-  padding: 8px 16px;
+  padding: 0.4rem 0.8rem;
   text-align: center;
   display: inline-block;
-  font-size: 14px;
-  margin: 0 20px;
-  margin-left: 10px;
+  font-size: 1rem;
+  margin: 0 1rem;
+  margin-left: 0.5rem;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -71,7 +74,36 @@ strong{
   background-color: rgb(195, 194, 194);
 }
 
-/* Additional Styling */
 
+/* Media queries for responsive behavior */
 
+@media screen and (max-width: 768px) {
+  .top-bar {
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    min-width: 50%;
+  }
 
+  .menu h2 {
+    font-size: 1.2rem;
+    margin-right: 0;
+  }
+
+  .menu a:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+
+  .navi {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  .user-info {
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+
+  .logout-btn {
+    margin-left: 0;
+  }
+}

@@ -3,20 +3,13 @@
 <head>
     <title>문제 등록 페이지</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../bars/css/side_bar.css">
     <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
     <link rel="stylesheet" type="text/css" href="./css/problem_add.css">
 </head>
+<?php include '../bars/top_bar.php'; ?>
 <body>
     <div class="container">
-        <div class="sidebar">
-            <?php include '../bars/side_bar.php'; ?>
-        </div>
-
-        <?php include '../bars/top_bar.php'; ?>
-
-
-
+    
         <div class="content">
             <div class="content-body">
                 <h1>문제 등록</h1>

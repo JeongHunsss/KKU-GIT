@@ -3,17 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>푼 문제 내역</title>
-        <link rel="stylesheet" type="text/css" href="../bars/css/side_bar.css">
         <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
         <link rel="stylesheet" type="text/css" href="./css/my_page.css">
     </head> 
+    <?php include '../bars/top_bar.php'; ?>
     <body>
     <div class="cont">
-            <div class="sidebar">
-                <?php include '../bars/side_bar.php'; ?>
-            </div>
-                <?php include '../bars/top_bar.php'; ?>
-            
+
             <div class="title">
                 <h1>푼 문제 내역</h1>
             </div>
