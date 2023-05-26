@@ -3,24 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>공지사항 글쓰기</title>
-    <link rel="stylesheet" type="text/css" href="../bars/css/side_bar.css">
     <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
     <link rel="stylesheet" type="text/css" href="./css/notice_add.css">
 </head>
-<body>
-    <div class="sidebar">
-        <?php include '../bars/side_bar.php'; ?>
-    </div>
-            
-    <?php include '../bars/top_bar.php'; ?>
-
-    <div class="header">
-	    <h1>공지사항 글쓰기</h1>
-    </div>
-    <div class="header-wrapper">
-        <?php include '../header.php'; ?>
-        <hr class="my-hr">
-    </div>
+<?php include '../bars/top_bar.php'; ?>
+<body>  
+    
+    
     <div class="cont">
         <div class="header">
             <h1>공지사항 글쓰기</h1>

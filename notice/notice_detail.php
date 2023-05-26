@@ -3,17 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>공지사항 상세보기</title>
-    <link rel="stylesheet" type="text/css" href="../bars/css/side_bar.css">
     <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
 	<link rel="stylesheet" type="text/css" href="./css/notice_detail.css">
 </head>
+<?php include '../bars/top_bar.php'; ?>
 <body>
-    <div class="sidebar">
-        <?php include '../bars/side_bar.php'; ?>
-    </div>
-            
-    <?php include '../bars/top_bar.php'; ?>
-
 	<div class="header">
 		<h1>공지사항 상세보기</h1>
 	</div>
