@@ -77,12 +77,9 @@ h2{
   /* text-align: center; */
 }
 
-.mail {
-  position: relative;
-  display: flex;
-  height: 100%;
-  bottom: 5px;;
-  vertical-align: middle;
+.kku_mail {
+  margin-top: 3px;
+  display: block;
 }
 
 .input-group .verification-code-button {

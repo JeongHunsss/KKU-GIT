@@ -145,7 +145,7 @@ if (isset($_POST['code_check'])) {
         </label>
         <div class="input-group">
              <input class="join-input" type="text" id="email" name="email" 
-                value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>"><span class="mail">@kku.ac.kr</span>
+                value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>"><span class="kku_mail">@kku.ac.kr</span>
             <button class="verification-code-button" name = "email_send">인증코드 받기</button>
         </div>
 
