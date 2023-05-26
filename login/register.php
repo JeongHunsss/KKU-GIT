@@ -28,7 +28,7 @@ if (isset($_POST['regist'])) {
                     $query = "INSERT INTO user (id, password, name) VALUES ('$user_id', '$password', '$user_name')";
                     mysqli_query($conn, $query);
 
-                    // 세션변수 무작위로 변경
+                    // 세션변수 무작위로 변경 이메일 코드 입력창은 최대 5글자 제한이므로 6글자의 코드로 초기화
                     $code = rand(100000, 999999);
                     $_SESSION['verification_code'] = $code;
                     $_SESSION['is_duplication'] = $code;
@@ -109,23 +109,24 @@ if (isset($_POST['code_check'])) {
         <h2>KKU-GIT 회원가입</h2>
     
         <label class="join-label" for="user_name">이름 </label>
-            <input class="join-input" type="text" id="user_name" name="user_name" 
-                value="<?php echo isset($_POST['user_name']) ? $_POST['user_name'] : ''; ?>">
+        <input class="join-input" type="text" id="user_name" name="user_name" 
+            maxlength="10" value="<?php echo isset($_POST['user_name']) ? $_POST['user_name'] : ''; ?>">
                 
       
-                <label class="join-label" for="user_id">아이디
-                    <?php
-                        if($_SESSION['is_duplication'] === 1){
-                            echo "<div class='isOK' >사용 가능한 아이디입니다!</div>";
-                        } else if($_SESSION['is_duplication'] === 2){
-                            echo "<div class='isNotOK' >아이디가 존재합니다.</div>";
-                        }
-                    ?>
-                </label>
+        <label class="join-label" for="user_id">아이디
+            <?php
+                if($_SESSION['is_duplication'] === 1){
+                    echo "<div class='isOK' >사용 가능한 아이디입니다!</div>";
+                } else if($_SESSION['is_duplication'] === 2){
+                    echo "<div class='isNotOK' >아이디가 존재합니다.</div>";
+                }
+            ?>
+        </label>
         
         <div class="input-group">
             <input class="join-input" type="text" id="user_id" name="user_id" 
-                value="<?php echo isset($_POST['user_id']) ? $_POST['user_id'] : ''; ?>">
+                value="<?php echo isset($_POST['user_id']) ? $_POST['user_id'] : ''; ?>"
+                maxlength="10" pattern="[A-Za-z0-9]{1,10}" placeholder="영어, 숫자만 입력(최대 10자)">
             <button class="verification-code-button" name="duplication_verify">중복확인</button>
         </div>
         
@@ -134,7 +135,8 @@ if (isset($_POST['code_check'])) {
         <!-- <br> -->
         <label class="join-label" for="password">비밀번호 </label>
             <input class="join-input" type="password" id="password" name="password" 
-                value="<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>">
+                value="<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>"
+                maxlength="20" pattern="[^\sㄱ-ㅎㅏ-ㅣ가-힣]{1,20}" placeholder="한글 사용 불가(최대 20자)">
         
 
         <label class="join-label" for="email">이메일
@@ -164,7 +166,7 @@ if (isset($_POST['code_check'])) {
         </label>
         <div class="input-group">
              <input class="join-input" type="text" id="verification_code" name="verification_code"
-                 value="<?php if($_SESSION['isChecking'] === 1){echo " 이메일 인증이 되었습니다.";} ?>">
+              maxlength="5" value="<?php if($_SESSION['isChecking'] === 1){echo " 이메일 인증이 되었습니다.";} ?>">
             <button class="verification-check-button" name="code_check">확인</button>
         </div>
 

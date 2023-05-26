@@ -34,7 +34,7 @@ h2{
   .join-input {
     margin-bottom: 10px;
     margin-left: 10px;
-    width: 160px;
+    width: 180px;
     height: 28px;
     display: inline-block;
     /* padding: 5px; */
@@ -86,13 +86,6 @@ h2{
   margin-left: 10px;
   align-self: flex-start;
 }
-
-.input-group .verification-check-button {
-  margin-left: 10px;
-  align-self: flex-start;
-}
-
-
 
 .duplicate-check-button{
   background-color: rgb(237, 147, 57);
