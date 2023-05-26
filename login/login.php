@@ -3,6 +3,8 @@ session_start();
 
 include '../config/dbconfig.php';
 
+$error = '';
+
 // 로그인 양식 제출 확인
 if (isset($_POST['login'])) {
     // 입력된 사용자 이름과 비밀번호 가져오기
@@ -35,6 +37,11 @@ if (isset($_POST['login'])) {
 <body class="login-body">
 <form method="post" class="login-form">
     <h2>KKU-GIT 로그인</h2>
+    <?php
+        if($error){
+            echo "<div class='login-error' >".$error."</div>";
+        }
+    ?>
     <label class="login-label" for="user_id">아이디</label>
     <input class="login-input" type="text" id="user_id" name="user_id" required>
     <label class="login-label" for="password">비밀번호</label>
