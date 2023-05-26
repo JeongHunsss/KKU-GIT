@@ -12,6 +12,13 @@
 </head>
 <?php include '../bars/top_bar.php'; ?>
 <body class="main_body">
+
+<div class="banner">
+  <img src="./banner.PNG" alt="Banner" class="banner-img active">
+  <img src="./banner2.PNG" alt="Banner 2" class="banner-img inactive">
+  <img src="./banner3.PNG" alt="Banner 3" class="banner-img inactive">
+</div>
+
     <div class="content-wrapper">
         <div class="notice-box">
             <h2>공지사항</h2>
@@ -38,22 +45,6 @@
                         <td>0003</td>
                         <td>인턴쉽 모집</td>
                         <td>2023-05-11</td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="notice-table">
-                <tbody>
-                    <tr>
-                        <th colspan="3" class="notice-content-title">내용</th>
-                    </tr>
-                    <tr>
-                        <td colspan="3">2023/06/06 점검으로 인해 접속 불가</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">2023/04/01~2023/06/07 모집 접수</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">2023년 2학기 인턴쉽 모집 중</td>
                     </tr>
                 </tbody>
             </table>
@@ -151,5 +142,30 @@
             </table>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var currentIndex = 0;
+            var images = $('.banner-img');
+            var totalImages = images.length;
+
+            function showImage(index) {
+                images.removeClass('active').addClass('inactive');
+                images.eq(index).removeClass('inactive').addClass('active');
+            }
+
+            function nextImage() {
+                currentIndex++;
+                if (currentIndex >= totalImages) {
+                    currentIndex = 0;
+                }
+                showImage(currentIndex);
+            }
+
+            setInterval(nextImage, 3000); 
+        });
+    </script>
+    
 </body>
 </html>

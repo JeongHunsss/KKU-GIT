@@ -1,82 +1,107 @@
 .content-wrapper {
-    margin-left: 10rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1.25rem;
-    margin-right: 10rem;
-  }
-  
-  .notice-box,
-  .rank-box,
-  .recent-problem-box {
-    border: 1px solid black;
-    border-radius: 1rem;
-    padding: 1.25rem;
-    margin-bottom: 1.25rem;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .notice-box {
-    margin-right: auto;
-    margin-left: auto;
-  }
-  
-  .rank-box {
-    margin-right: auto;
-    margin-left: auto;
-  }
-  
-  .recent-problem-box {
-    margin-right: auto;
-    margin-left: auto;
-  }
-  
-  .notice-box h2,
-  .rank-box h2,
-  .recent-problem-box h2 {
-    color: black;
-  }
-  
-  .notice-table,
-  .ranking-table,
-  .recent-problem-table {
-    width: 100%;
-    margin-top: 0.625rem;
-  }
-  
-  .notice-box table,
-  .rank-box table,
-  .recent-problem-box table {
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .notice-content-title {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.5rem;
-    padding-top: 0.625rem;
-    padding-bottom: 0.3125rem;
-  }
-  
-  .transparent-table {
-    border-collapse: collapse;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .transparent-table th,
-  .transparent-table td {
-    border: 1px solid black;
-    padding: 0.625rem;
-    text-align: center;
-  }
-  
-  .recent-problem-table {
-    width: 100%;
-    table-layout: auto;
-  }
-  
+  margin: 1.5rem;
+  display: grid;
+  gap: 1.8rem;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.banner {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: opacity 0.5s;
+}
+
+.banner-img.active {
+  opacity: 1;
+}
+
+.banner-img.inactive {
+  opacity: 0;
+}
+
+.notice-box,
+.rank-box,
+.recent-problem-box {
+  border: 1.55px solid black;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+  width: 100%;
+  text-align: center;
+  margin-left:10pt;
+}
+
+.notice-box {
+  grid-column: 1 / -1;
+  background-color: azure;
+}
+
+.rank-box {
+  grid-column: 1 / 2;
+  background-color: azure;
+}
+
+.rank-box table tr:hover {
+  background-color: rgba(251, 197, 81, 0.971);
+}
+
+.recent-problem-box {
+  grid-column: 2 / 4;
+  background-color: azure;
+}
+
+.notice-box h2,
+.rank-box h2,
+.recent-problem-box h2 {
+  color: black;
+  margin-bottom: 1.5rem;
+}
+
+.notice-table,
+.ranking-table,
+.recent-problem-table {
+  width: 100%;
+  margin-top: 0.625rem;
+}
+
+.notice-box table,
+.rank-box table,
+.recent-problem-box table {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.notice-content-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.3125rem;
+}
+
+.transparent-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.transparent-table th,
+.transparent-table td {
+  border: 1px solid black;
+  padding: 0.625rem;
+  text-align: center;
+}
+
+.recent-problem-table {
+  width: 100%;
+  table-layout: auto;
+}
