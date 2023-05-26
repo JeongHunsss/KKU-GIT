@@ -14,7 +14,7 @@
             <div class="link
                 <?php echo ($_SESSION['cur_page'] === 'notice') ? 'current-page' : ''; ?>" 
                 onclick="location.href='../notice/notice_list.php'">
-                공지사항
+                공지사항 테스트용
             </div>
             <div class="link 
                 <?php echo ($_SESSION['cur_page'] === 'problem_add') ? 'current-page' : ''; ?>"
