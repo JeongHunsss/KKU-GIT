@@ -108,7 +108,8 @@
                 <div>
                 <form action="" method="post">
                     <label for="current_password">현재 비밀번호</label><br>
-                    <input type="password" id="current_password" name="current_password">
+                    <input type="password" id="current_password" name="current_password"
+                        maxlength="20" pattern="[^\sㄱ-ㅎㅏ-ㅣ가-힣]{1,20}" placeholder="한글 사용 불가(최대 20자)">
                     <input class="change-btn" type="submit" value="확인"><br><br>
                 </form>
                 <form action="" method="post">
@@ -116,9 +117,11 @@
                         // 현재 비밀번호 일치 시 새 비밀번호 입력창 렌더링
                         if (isset($_POST['current_password']) && $_POST['current_password'] == $info_row['password']) {
                             echo '<label for="new_password">새 비밀번호</label><br>';
-                            echo '<input type="password" id="new_password" name="new_password"><br><br>';
+                            echo '<input type="password" id="new_password" name="new_password"
+                                    maxlength="20" pattern="[^\sㄱ-ㅎㅏ-ㅣ가-힣]{1,20}"><br><br>';
                             echo '<label for="confirm_new_password">새 비밀번호 확인</label><br>';
-                            echo '<input type="password" id="confirm_new_password" name="confirm_new_password">';
+                            echo '<input type="password" id="confirm_new_password" name="confirm_new_password"
+                                    maxlength="20" pattern="[^\sㄱ-ㅎㅏ-ㅣ가-힣]{1,20}">';
                             echo '<input class="change-btn" type="submit" value="변경">';
                         }
                         // 현재 비밀번호 불일치
