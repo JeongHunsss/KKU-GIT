@@ -51,7 +51,7 @@
 }
 
 .rank-box table tr:hover {
-  background-color: rgba(251, 197, 81, 0.971);
+  background-color: rgb(58, 110, 224);
 }
 
 .recent-problem-box {
@@ -104,4 +104,45 @@
 .recent-problem-table {
   width: 100%;
   table-layout: auto;
+}
+
+.idx-col{
+  width:3%;
+}
+
+.title-col{
+  width:20%;
+}
+
+.author-col{
+  width:3%;
+}
+
+.date-col{
+  width:5%;
+}
+
+.subject-col{
+  width:8%;
+}
+
+.more-btn{
+  position: relative;
+  width:100px;
+  height:20px;
+  left:47%;
+  color: white;
+  background-color: rgb(119, 150, 218);
+}
+
+.first_rank{
+  background-color: gold;
+}
+
+.second_rank{
+  background-color: silver;
+}
+
+.third_rank{
+  background-color: rgb(173, 138, 96);
 }

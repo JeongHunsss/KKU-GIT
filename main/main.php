@@ -1,6 +1,40 @@
 <?php
     session_start();
     $_SESSION['cur_page'] = 'main';
+    include '../config/dbconfig.php';
+
+    // 공지사항 데이터 가져오기
+    $notice_query = "SELECT n.idx, n.title, u.name AS author_name, n.date
+                FROM notice AS n
+                JOIN user AS u ON n.author = u.id
+                ORDER BY n.idx DESC
+                LIMIT 5";
+    $notice_result = mysqli_query($conn, $notice_query);
+    if (!$notice_result) {
+        $notice_no_result = '공지사항이 없습니다.';
+    }    
+
+    // 랭킹 데이터 가져오기
+    $rank_query = "SELECT name, grade, point
+                FROM user
+                WHERE grade != 'admin'
+                ORDER BY point DESC
+                LIMIT 10";
+    $rank_result = mysqli_query($conn, $rank_query);
+    if (!$rank_result) {
+        $rank_no_result = '랭킹 데이터가 없습니다.';
+    }
+
+    // 최근 등록 문제 데이터 가져오기
+    $problem_query = "SELECT p.idx, p.subject, p.title, u.name AS author_name, p.date
+                                FROM problem_list AS p
+                                JOIN user AS u ON p.author = u.id
+                                ORDER BY p.idx DESC
+                                LIMIT 16";
+    $problem_result = mysqli_query($conn, $problem_query);
+    if (!$problem_result) {
+        $problem_no_result = '최근 등록 문제가 없습니다.';
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,127 +53,109 @@
   <img src="../img/banner3.PNG" alt="Banner 3" class="banner-img inactive">
 </div>
 
-    <div class="content-wrapper">
+<div class="content-wrapper">
         <div class="notice-box">
             <h2>공지사항</h2>
-            <table class="notice-table">
-                <thead>
-                    <tr>
-                        <th>번호</th>
-                        <th>제목</th>
-                        <th>등록일자</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>0001</td>
-                        <td>홈페이지 점검</td>
-                        <td>2023-05-13</td>
-                    </tr>
-                    <tr>
-                        <td>0002</td>
-                        <td>충청북도 네트워크 대회</td>
-                        <td>2023-05-12</td>
-                    </tr>
-                    <tr>
-                        <td>0003</td>
-                        <td>인턴쉽 모집</td>
-                        <td>2023-05-11</td>
-                    </tr>
-                </tbody>
-            </table>
+            <?php
+                if(!$notice_result){
+                    echo $notice_no_result;
+                }else{
+                echo '<table class="notice-table">';
+                    echo '<thead>';
+                        echo '<tr>';
+                            echo '<th class="idx-col">번호</th>';
+                            echo '<th class="title-col">제목</th>';
+                            echo '<th class="author-col">작성자</th>';
+                            echo '<th class="date-col">등록일자</th>';
+                        echo '</tr>';
+                    echo '</thead>';
+                    echo '<tbody>';
+                    while ($notice_row = mysqli_fetch_assoc($notice_result)) {
+                        echo "<tr>";
+                        echo "<td>" . $notice_row['idx'] . "</td>";
+                        echo "<td>" . $notice_row['title'] . "</td>";
+                        echo "<td>" . $notice_row['author_name'] . "</td>";
+                        echo "<td>" . $notice_row['date'] . "</td>";
+                        echo "</tr>";
+                    }
+                    echo '</tbody>';
+                    echo '</table>';
+                }
+            ?>
+            <div class="more-btn" onclick="location.href='../notice/notice_list.php'">더보기+</div>
         </div>
 
         <div class="rank-box">
             <h2>랭킹</h2>
-            <table class="transparent-table">
-                <thead>
-                    <tr>
-                        <th>순위</th>
-                        <th>이름(등급)</th>
-                        <th>포인트</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>유지민 (골드)</td>
-                        <td>1000</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>이지은 (실버)</td>
-                        <td>900</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>송강호 (브론즈)</td>
-                        <td>800</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>임강원 (브론즈)</td>
-                        <td>700</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>박정훈 (브론즈)</td>
-                        <td>600</td>
-                    </tr>
-                </tbody>
-            </table>
+            <?php
+                if(!$rank_result){
+                    echo $rank_no_result;
+                }else{
+                    echo '<table class="transparent-table">';
+                        echo '<thead>';
+                            echo '<tr>';
+                                echo '<th>순위</th>';
+                                echo '<th>이름(등급)</th>';
+                                echo '<th>포인트</th>';
+                            echo '</tr>';
+                        echo '</thead>';
+                        echo '<tbody>';
+                                $rank = 1;
+                                while ($rank_row = mysqli_fetch_assoc($rank_result)) {
+                                    if($rank == 1){
+                                        echo '<tr class="first_rank">';
+                                    }else if($rank == 2){
+                                        echo '<tr class="second_rank">';
+                                    }else if($rank == 3){
+                                        echo '<tr class="third_rank">';
+                                    }else{
+                                        echo '<tr>';
+                                    }
+                                    echo "<td>" . $rank . "</td>";
+                                    echo "<td>" . $rank_row['name'] . " (" . $rank_row['grade'] . ")</td>";
+                                    echo "<td>" . $rank_row['point'] . "</td>";
+                                    echo "</tr>";
+                                    $rank++;
+                                }
+
+                        echo '</tbody>';
+                    echo '</table>';
+                }
+            ?>            
         </div>
 
         <div class="recent-problem-box">
             <h2>최근 등록 문제</h2>
-            <table class="recent-problem-table">
-                <thead>
-                    <tr>
-                        <th>등록번호</th>
-                        <th>과목</th>
-                        <th>제목</th>
-                        <th>등록자</th>
-                        <th>등록일자</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>0001</td>
-                        <td>데이터베이스</td>
-                        <td>mysql 설치 방법</td>
-                        <td>간미연</td>
-                        <td>2023-05-13</td>
-                    </tr>
-                    <tr>
-                        <td>0002</td>
-                        <td>운영체제</td>
-                        <td>운영체제 용어 정리</td>
-                        <td>유지민</td>
-                        <td>2023-05-13</td>
-                    </tr>
-                    <tr>
-                        <td>0003</td>
-                        <td>컴퓨터알고리즘</td>
-                        <td>컴퓨터알고리즘 구조</td>
-                        <td>송강호</td>
-                        <td>2023-05-12</td>
-                    </tr>
-                    <tr>
-                        <td>0004</td>
-                        <td>빅데이터</td>
-                        <td>서울통계사이트 웹크롤링</td>
-                        <td>임강원</td>
-                        <td>2023-05-11</td>
-                    </tr>
-                    <tr>
-                        <td>0005</td>
-                        <td>대학수학</td>
-                        <td>sin, cos, tan 종합 문제</td>
-                        <td>김창섭</td>
-                        <td>2023-05-10</td>
-                    </tr>
-                </tbody>
-            </table>
+            <?php
+                if (!$problem_result) {
+                    echo $problem_no_result;
+                }else{
+                       echo '<table class="recent-problem-table">';
+                           echo '<thead>';
+                               echo '<tr>';
+                                echo '<th class="idx-col">등록번호</th>';
+                                echo '<th class="subject-col">과목</th>';
+                                echo '<th class="title-col">제목</th>';
+                                   echo '<th class="author-col">등록자</th>';
+                                   echo '<th class="date-col">등록일자</th>';
+                            echo '</tr>';
+                        echo '</thead>';
+                        echo '<tbody>';
+                    while ($problem_row = mysqli_fetch_assoc($problem_result)) {
+                        echo "<tr>";
+                        echo "<td>" . $problem_row['idx'] . "</td>";
+                        echo "<td>" . $problem_row['subject'] . "</td>";
+                        echo "<td>" . $problem_row['title'] . "</td>";
+                        echo "<td>" . $problem_row['author_name'] . "</td>";
+                        echo "<td>" . $problem_row['date'] . "</td>";
+                        echo "</tr>";
+                       }
+                
+                    echo '</tbody>';
+                    echo '</table>';
+                }
+            ?>
+            <div class="more-btn" onclick="location.href='../problem/problem_list.php'">더보기+</div>
         </div>
     </div>
 
@@ -169,3 +185,8 @@
     
 </body>
 </html>
+
+<?php
+    // 데이터베이스 연결 종료
+    mysqli_close($conn);
+?>
