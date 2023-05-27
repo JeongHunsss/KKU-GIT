@@ -8,7 +8,7 @@
         <meta charset="UTF-8">
         <title>등록 문제 내역</title>
         <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
-        <link rel="stylesheet" type="text/css" href="./css/my_page.css">
+        <link rel="stylesheet" type="text/css" href="./css/my_problem.css">
     </head> 
     <?php include '../bars/top_bar.php'; ?>
     <body>
@@ -50,7 +50,27 @@
                         <td>유 정</td>
                         <td>2022-05-11</td>
                     </tr>
-                
+                    <tr>
+                        <td>3</td>
+                        <td>데이터베이스</td>
+                        <td>텀프 우리가 짱 먹음</td>
+                        <td>유 정</td>
+                        <td>2022-05-11</td>
+                    </tr> 
+                    <tr>
+                        <td>3</td>
+                        <td>데이터베이스</td>
+                        <td>텀프 우리가 짱 먹음</td>
+                        <td>유 정</td>
+                        <td>2022-05-11</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>데이터베이스</td>
+                        <td>텀프 우리가 짱 먹음</td>
+                        <td>유 정</td>
+                        <td>2022-05-11</td>
+                    </tr>
                     <!-- 다른 문제들의 정보를 추가 -->
 
                     </tbody>
