@@ -175,7 +175,7 @@ if (isset($_POST['code_check'])) {
         <div class="button-group">
             <button class="verification-check-button" type="submit" name="regist">회원가입</button>
             <div class="button-space"></div>
-            <button class="duplicate-check-button" name="cancel">취소</button>
+            <button class="cancel-button" name="cancel">취소</button>
         </div>
     </form>
 </body>

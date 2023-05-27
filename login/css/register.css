@@ -87,7 +87,7 @@ h2{
   align-self: flex-start;
 }
 
-.duplicate-check-button{
+.cancel-button{
   background-color: rgb(237, 147, 57);
   padding: 10px;
   width: 75px;
