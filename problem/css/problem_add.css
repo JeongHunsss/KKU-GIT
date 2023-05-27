@@ -1,37 +1,27 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    font-family: Arial, sans-serif;
-}
-
-.container {
+.container-add {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 50px;
+    background-color: #f5f5f5;
 }
 
-.sidebar {
-    flex: 0 0 200px;
+.form-add {
+    width: 400px;
+    margin-top: -150px;
 }
 
-.content {
-    flex-grow: 1;
-    margin-left: 20px;
-}
-
-form {
-    margin: 30px;
-}
-
-label {
+.label-add {
     display: block;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-input[type="submit"],
-input[type="button"] {
+.submit {
     display: inline-block;
     margin-top: 20px;
-    margin-right: 20px;
+    margin-right: 10px;
     padding: 10px 20px;
     background-color: blue; 
     color: white;
@@ -40,31 +30,57 @@ input[type="button"] {
     cursor: pointer;
 }
 
-input[type="text"] {
+.cancel {
     display: inline-block;
-    margin-right: 20px;
-    padding: 5px;
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: orange; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="text"],
+textarea {
+    width: 30%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="text1"],
+textarea {
+    width: 60%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="text2"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+
+input[type="text3"],
+textarea {
+    width: 100%;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
 
 textarea {
-    display: block;
-    margin-right: 20px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    resize: vertical;
+    height: 100px;
 }
 
 h1 {
     text-align: center;
     color: blue;
-}
-
-.content-body {
-    margin-left: 40pt;
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
+    margin-bottom: 20px;
 }
