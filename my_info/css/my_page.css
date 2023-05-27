@@ -1,5 +1,6 @@
 .wrap{
   background-color: #F8F8F8;  
+  font-family: 'Jua', sans-serif;
 }
  /* 배경 */
 .GoldContainer{  
@@ -109,14 +110,14 @@ a.item:hover {
 
 /* 숫자 */
 .problemContainer .number{
-  font-size: 19px;
+  font-size: 50px;
   font-weight: bold;
   color:rgb(58, 110, 224);  
 }
 
 /* 텍스트 */
 .problemContainer .item > div:nth-child(2){
-  font-size: 13px;
+  font-size: 30px;
 }
   
 .problemContainer .item2{
@@ -129,21 +130,33 @@ a.item:hover {
 
 /* 숫자 */
 .problemContainer .number2{
-  font-size: 19px;
+  font-size: 30px;
   font-weight: bold;
   color:rgb(58, 110, 224);
 }
 
 /* 텍스트 */
 .problemContainer .item2 > div:nth-child(2){
-  font-size: 13px;
+  font-size: 20px;
+}
+
+.confirm-btn{
+  background-color: blue; /* 색상을 원하는 값으로 변경하세요 */
+  color: #fff; /* 텍스트 색상을 원하는 값으로 변경하세요 */
+  padding: 6px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Jua', sans-serif;
 }
 
 .change-btn{
   background-color: blue; /* 색상을 원하는 값으로 변경하세요 */
   color: #fff; /* 텍스트 색상을 원하는 값으로 변경하세요 */
-  padding: 8px 16px;
+  padding: 6px 16px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  margin-left: 7px;
+  font-family: 'Jua', sans-serif;
 }

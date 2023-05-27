@@ -102,6 +102,7 @@ if (isset($_POST['code_check'])) {
     <title>KKU-GIT 회원가입</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./css/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 </head>
 
 <body class="join-body">

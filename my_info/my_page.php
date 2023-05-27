@@ -57,11 +57,10 @@
         <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
         <link rel="stylesheet" type="text/css" href="./css/my_page.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     </head> 
+    <?php include '../bars/top_bar.php'; ?>  
     <body>
-        <?php include '../bars/top_bar.php'; ?>  
-
         <div class="wrap">
             <?php
                 if($info_row['grade'] == 'gold'){
@@ -110,7 +109,7 @@
                     <label for="current_password">현재 비밀번호</label><br>
                     <input type="password" id="current_password" name="current_password"
                         maxlength="20" pattern="[^\sㄱ-ㅎㅏ-ㅣ가-힣]{1,20}" placeholder="한글 사용 불가(최대 20자)">
-                    <input class="change-btn" type="submit" value="확인"><br><br>
+                    <input class="confirm-btn" type="submit" value="확인"><br><br>
                 </form>
                 <form action="" method="post">
                     <?php
