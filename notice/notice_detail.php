@@ -8,6 +8,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>공지사항 상세보기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
 	<link rel="stylesheet" type="text/css" href="./css/notice_detail.css">
 </head>

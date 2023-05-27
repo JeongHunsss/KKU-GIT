@@ -23,6 +23,7 @@
   max-width: 50%;
   padding: 1.25%;
   margin: 0 auto;
+  font-family: 'Jua', sans-serif;
 }
 
 .container {
@@ -46,12 +47,14 @@
 
 .detail-h2 {
   color: black;
+  font-family: 'Jua', sans-serif;
 }
 
 .info {
   text-align: right;
   margin-left: auto;
   border-bottom: 1px solid #ccc;
+  font-family: 'Jua', sans-serif;
 }
 
 .date {
@@ -61,6 +64,7 @@
 
 .content {
   margin-bottom: 1.25%;
+  font-family: 'Jua', sans-serif;
 }
 
 .button {
@@ -76,6 +80,7 @@
   border: none;
   border-radius: 5px; /* Increase the border radius for a rounder button */
   cursor: pointer;
+  font-family: 'Jua', sans-serif;
 }
 
 .delete-button {
@@ -88,6 +93,7 @@
   border: none;
   border-radius: 5px; /* Increase the border radius for a rounder button */
   cursor: pointer;
+  font-family: 'Jua', sans-serif;
 }
 
 

@@ -22,6 +22,7 @@
 .logo h2 {
   margin-right: 0.5rem;
   font-size: 1.2rem;
+  font-family: 'Jua', sans-serif;
 }
 
 .logo:not(:last-child),
@@ -46,21 +47,25 @@
   color: white;
   text-decoration: none;
   text-align: center;
+  font-family: 'Jua', sans-serif;
 }
 
 
 .user-info {
   text-align: right;
   color: white;
+  font-family: 'Jua', sans-serif;
 }
 
 .strong-name {
   color: rgb(253, 195, 108);
+  font-family: 'Jua', sans-serif;
 }
 
 .user-info a {
   margin-left: 0.5rem;
   text-decoration: none;
+  font-family: 'Jua', sans-serif;
 }
 
 .logout-btn {
