@@ -14,9 +14,9 @@
 <body class="main_body">
 
 <div class="banner">
-  <img src="./banner.PNG" alt="Banner" class="banner-img active">
-  <img src="./banner2.PNG" alt="Banner 2" class="banner-img inactive">
-  <img src="./banner3.PNG" alt="Banner 3" class="banner-img inactive">
+  <img src="../img/banner.PNG" alt="Banner" class="banner-img active">
+  <img src="../img/banner2.PNG" alt="Banner 2" class="banner-img inactive">
+  <img src="../img/banner3.PNG" alt="Banner 3" class="banner-img inactive">
 </div>
 
     <div class="content-wrapper">
