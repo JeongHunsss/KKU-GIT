@@ -16,6 +16,7 @@
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
+    font-family: 'Jua', sans-serif;
 }
 
 .submit {
@@ -28,6 +29,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Jua', sans-serif;
 }
 
 .cancel {
@@ -40,6 +42,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Jua', sans-serif;
 }
 
 input[type="text"],
