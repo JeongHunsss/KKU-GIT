@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>문제 리스트</title>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
@@ -13,19 +14,19 @@
 <?php include '../bars/top_bar.php'; ?>
 <body>
     <div class="container">
-
-        <div class="content">
-            <br><br><br>
+        <h1 class="problem_title">문제 리스트</h1>
+        <div class="problem_container">
             <form method="get" action="" class="search-form">
-                <label for="subject">과목 검색</label>
+                <!-- <label class="sub_title" for="subject">과목 검색</label> -->
                 <input type="text" name="subject" id="subject">
-                <input type="submit" value="검색">
+                <button type="submit" class="search-btn">과목 검색</button>
             </form>
 
-            <form method="get" action="problem_add.php" style="float:right; margin-right:60px;">
-                <input type="submit" value="문제 등록">
+            <form method="get" action="problem_add.php" class="submit-form">
+                <input type="submit" value="문제 등록" class="submit-btn">
             </form>
-            
+        </div>   
+
             <table>
                 <thead>
                     <tr>
@@ -36,7 +37,6 @@
                         <th>작성일</th>
                     </tr>
                 </thead>
-                <br><br><br>
                 <tbody>
                     <tr>
                         <td>0001</td>
@@ -59,7 +59,6 @@
                         <td>송강호</td>
                         <td>2023-05-12</td>
                     </tr>
-
                     <tr>
                         <td>0004</td>
                         <td>빅데이터 기초</td>
@@ -67,7 +66,6 @@
                         <td>임강원</td>
                         <td>2023-05-11</td>
                     </tr>
-
                     <tr>
                         <td>0005</td>
                         <td>대학수학</td>
@@ -75,25 +73,15 @@
                         <td>김창섭</td>
                         <td>2023-05-10</td>
                     </tr>
-
                 </tbody>
             </table>
             
-            <br>
-            
             <div class="pagination">
-                <div class="pagination-box">
-                    <a href="#" class="disabled"><<</a>
-                    <a href="#" class="disabled"><</a>
-                    <a href="#" class="active">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#">></a>
-                    <a href="#">>></a>
-                </div>
-            </div>
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">&raquo;</a>
         </div>
     </div>
 

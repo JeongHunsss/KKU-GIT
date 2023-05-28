@@ -102,10 +102,10 @@
 }
 
 .noti_contents {
-  border-bottom: 2px solid gray;
+  border-bottom: 1px solid gray;
   }
   .noti_contents2 {
-    border-bottom: 2px solid gray;
+    border-bottom: 1px solid gray;
     background-color: azure;
     }
   
@@ -132,5 +132,5 @@
 }
 
 .pagination a:hover:not(.active) {
-  background-color: white;
+  background-color: rgb(221, 218, 218);
 }
