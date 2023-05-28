@@ -7,14 +7,18 @@
     include '../config/dbconfig.php';
     include '../config/pagination_config.php';
 
-    // 등록된 문제의 총 개수 조회
-    $countQuery = "SELECT COUNT(*) AS total FROM problem_list WHERE author = '$query_id'";
+    // 푼 문제의 총 개수 조회
+    $countQuery = "SELECT COUNT(*) AS total FROM solved_problem WHERE user_id = '$query_id'";
     $countResult = mysqli_query($conn, $countQuery);
     $totalCount = mysqli_fetch_assoc($countResult)['total'];
 
-    // 등록된 문제 정보 가져오기
-    $regProInfoQuery = "SELECT * FROM problem_list WHERE author = '$query_id' LIMIT $startIndex, $resultsPerPage";
-    $regProInfoResult = mysqli_query($conn, $regProInfoQuery);
+    // 푼 문제 정보 가져오기
+    $solProInfoQuery = "SELECT * FROM solved_problem AS s
+                         JOIN problem_list AS p ON s.problem_idx = p.idx
+                         WHERE s.user_id = '$query_id'
+                         ORDER BY p.idx DESC
+                         LIMIT $startIndex, $resultsPerPage";
+    $solProInfoResult = mysqli_query($conn, $solProInfoQuery);
 
 ?>
 
@@ -48,30 +52,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>자료구조</td>
-                    <td>스택 구현하기</td>
-                    <td>홍길동</td>
-                    <td>2022-05-10</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>알고리즘</td>
-                    <td>퀵 정렬 구현하기</td>
-                    <td>김철수</td>
-                    <td>2022-05-11</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>데이터베이스</td>
-                    <td>텀프 우리가 짱 먹음</td>
-                    <td>유 정</td>
-                    <td>2022-05-11</td>
-                </tr>
-            
-                <!-- 다른 문제들의 정보를 추가 -->
-
+                <?php
+                    while ($row = mysqli_fetch_assoc($solProInfoResult)) {
+                        echo "<tr>";
+                        echo "<td>" . $row['idx'] . "</td>";
+                        echo "<td>" . $row['subject'] . "</td>";
+                        echo "<td>" . $row['title'] . "</td>";
+                        echo "<td>" . $row['author'] . "</td>";
+                        echo "<td>" . $row['date'] . "</td>";
+                        echo "</tr>";
+                    }
+                ?>
                 </tbody>
             </table>
             </div>
