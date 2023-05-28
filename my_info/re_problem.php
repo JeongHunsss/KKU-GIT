@@ -6,13 +6,13 @@
     include '../config/dbconfig.php';
     include '../config/pagination_config.php';
 
-    // 등록된 문제의 총 개수 조회
+    // 등록한 문제의 총 개수 조회
     $countQuery = "SELECT COUNT(*) AS total FROM problem_list WHERE author = '$query_id'";
     $countResult = mysqli_query($conn, $countQuery);
     $totalCount = mysqli_fetch_assoc($countResult)['total'];
 
-    // 등록된 문제 정보 가져오기
-    $regProInfoQuery = "SELECT * FROM problem_list WHERE author = '$query_id' LIMIT $startIndex, $resultsPerPage";
+    // 등록한 문제 정보 가져오기
+    $regProInfoQuery = "SELECT * FROM problem_list WHERE author = '$query_id' ORDER BY idx DESC LIMIT $startIndex, $resultsPerPage";
     $regProInfoResult = mysqli_query($conn, $regProInfoQuery);
 
 ?>
