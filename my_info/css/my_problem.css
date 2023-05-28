@@ -9,7 +9,7 @@
   font-family: 'Jua', sans-serif;
 } 
 .title {
-  text-align: center;
+  left:40%;
   color: rgb(58, 110, 224);
 }
 
@@ -51,26 +51,3 @@
   th:nth-child(5), td:nth-child(5) {
     width: 20%;
   }
-
-/*페이지네이션*/
-.pagination {
-    display: flex; 
-    justify-content: center; 
-    margin-top: 20px;
-}
-
-.pagination a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-.pagination a.active {
-    /* background-color: #4CAF50; */
-    color: white;
-}
-
-.pagination a:hover:not(.active) {
-    background-color: white;
-}
