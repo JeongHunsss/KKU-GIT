@@ -25,8 +25,17 @@
             <div class="link 
                 <?php echo ($_SESSION['cur_page'] === 'problem_list') ? 'current-page' : ''; ?>" 
                 onclick="location.href='../problem/problem_list.php'">
-                문제 리스트
+                문제 풀기
             </div>
+            <?php
+                if ($_SESSION['user_id'] == 'admin') {
+                    echo "<div class='link " 
+                        . ($_SESSION['cur_page'] === 'reported_list' ? 'current-page' : '') 
+                        . "' onclick=\"location.href='../problem/reported_list.php'\">";
+                    echo "신고 받은 문제";
+                    echo "</div>";
+                }
+            ?>
         </div> 
         <div class="user-info">
             <?php
