@@ -8,18 +8,20 @@
 <head>
     <meta charset="UTF-8">
     <title>공지사항 글쓰기</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- FontAwesome 라이브러리 CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
     <link rel="stylesheet" type="text/css" href="./css/notice_add.css">
 </head>
 <?php include '../bars/top_bar.php'; ?>
-<body>  
-    
-    
+<body class="notice_body">  
+
     <div class="cont">
         <div class="header">
-            <h1>공지사항 글쓰기</h1>
+            <h1>공지사항 글쓰기<i class="fas fa-pencil-alt"></i></h1>
+            
         </div>
+     
         <div class="container">
             <form action="process_notice.php" method="post">
                 <div class="form-group">
@@ -31,12 +33,13 @@
                     <textarea id="content" name="content" rows="10" cols="50" required></textarea>
                 </div>
 
-                <div style="text-align: right;">
+                <div class="btn" >
                     <input type="submit" class="submit-button" value="등록">
                     <button type="button" class="cancel-button" onclick="location.href='notice.php'">취소</button>
                 </div>
             </form>
         </div>
+        
     </div>
 
   </body>
