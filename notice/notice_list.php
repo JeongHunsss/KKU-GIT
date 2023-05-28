@@ -37,38 +37,33 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
+                <tr class="noti_contents">
                     <td class="noti_td">1</td> 
                     <td class="noti_td">공지사항1</td>
                     <td class="noti_td">관리자</td>
                     <td class="noti_td">2022-05-10</td>
                 </tr>
-                <tr>
-                    <td class="noti_td">2</td>
+                <tr class="noti_contents2">                    <td class="noti_td">2</td>
                     <td class="noti_td">공지사항2</td>
                     <td class="noti_td">관리자</td>
                     <td class="noti_td">2022-05-11</td>
                 </tr>
-                <tr>
-                    <td class="noti_td">3</td>
+                <tr class="noti_contents">                    <td class="noti_td">3</td>
                     <td class="noti_td">공지사항3</td>
                     <td class="noti_td">관리자</td>
                     <td class="noti_td">2022-05-11</td>
                 </tr>
-                <tr>
-                    <td class="noti_td">4</td>
+                <tr class="noti_contents2">                    <td class="noti_td">4</td>
                     <td class="noti_td">공지사항3</td>
                     <td class="noti_td">관리자</td>
                     <td class="noti_td">2022-05-11</td>
                 </tr>
-                <tr>
-                    <td class="noti_td">5</td>
+                <tr class="noti_contents">                    <td class="noti_td">5</td>
                     <td class="noti_td">공지사항3</td>
                     <td class="noti_td">관리자</td>
                     <td class="noti_td">2022-05-11</td>
                 </tr>
-                <tr>
-                    <td class="noti_td">6</td>
+                <tr class="noti_contents2">                    <td class="noti_td">6</td>
                     <td class="noti_td">공지사항3</td>
                     <td class="noti_td">관리자</td>
                     <td class="noti_td">2022-05-11</td>

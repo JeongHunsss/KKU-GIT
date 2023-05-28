@@ -101,6 +101,15 @@
   width: 20%;
 }
 
+.noti_contents {
+  border-bottom: 2px solid gray;
+  }
+  .noti_contents2 {
+    border-bottom: 2px solid gray;
+    background-color: azure;
+    }
+  
+
 .pagination {
   display: flex;
   justify-content: center;
