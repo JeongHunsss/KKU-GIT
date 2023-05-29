@@ -15,6 +15,13 @@ $_SESSION['cur_page'] = 'problem_list';
 <body>
     <div class="problem-detail-container">
         <div class="problem-detail-body">
+
+        <div class="report-buttons">
+            <button class="report-button">&#x26D4 신고하기</button>
+            <button class="reset-button">&#x1F504 신고 초기화</button>
+        </div>
+
+
             <div class="problem-detail-header">
                 <h2>제목: 데이터베이스 sql 관련</h2>
             </div>

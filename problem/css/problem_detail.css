@@ -11,7 +11,7 @@
 
 .problem-detail-body {
   width: 700px; 
-  height: 500px; 
+  height: 550px; 
   margin-left: 450px;
   margin-right: auto;
   margin-top: 30px;
@@ -23,6 +23,34 @@
   text-align: left; 
   display: inline-block;
 }
+
+.report-buttons {
+  text-align: right;
+}
+
+.report-button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.reset-button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
 
 .problem-detail-comment-list {
   margin-right: 30px;
