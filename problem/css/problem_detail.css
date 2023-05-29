@@ -1,59 +1,170 @@
-body {
-  display: flex;
+.problem-detail-container {
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  width: 100vw;
   height: 100vh;
-}
-
-.container {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   font-family: 'Jua', sans-serif;
+  background-color: #fff;
 }
 
-.comment-list {
-  text-align: left;
+.problem-detail-body {
+  width: 700px; 
+  height: 600px; 
+  margin-left: 450px;
+  margin-right: auto;
+  margin-top: 30px;
+  background-color: rgb(229, 228, 224);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 0px 1px rgba(187, 194, 199, 0.5);
+  font-family: 'Jua', sans-serif;
+  text-align: left; 
+  display: inline-block;
 }
 
-.comment-section {
-  margin-top: 50px;
+.report-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.comment-list {
-  margin-top: 20px;
+
+.report-buttons .report-button,
+.report-buttons .reset-button {
+  margin-left: 10px;
 }
 
-.comment-list ul {
+
+.report-button,
+.reset-button,
+.additional-button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  
+}
+
+.reset-button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.problem-detail-info {
+  font-size: 12px;
+}
+
+.problem-detail-comment-list {
+  margin-right: 30px;
+  text-align: center; 
+  margin-top: 10px;
+}
+
+.problem-detail-comment-section {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: left; 
+}
+
+.problem-detail-comment-list ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.comment-list li {
+.problem-detail-comment-list li {
   border: 1px solid #ccc;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: left; 
+}
+
+.comment-textarea {
+  width: 1470px; 
+  height: 100px; 
+}
+
+.submit-button {
+  margin-left:250px;
+  background-color: blue; 
+  color: white;
+  border: none; 
+  border-radius: 5px;
+  padding: 10px 20px; 
+  text-align: center; 
+  display: inline-block; 
+}
+
+.reveal-button {
+  margin-left: 30px;
+  margin-right: 30px;
+  background-color: #a09a9a; 
+  color: white; 
+  border: none; 
+  border-radius: 5px;
+  padding: 10px 20px; 
+  text-align: center; 
+  display: inline-block; 
+  margin-left: 5px;
+}
+
+.comment-textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ccc;
   padding: 10px;
+  border-radius: 5px;
+  width: 1450px; 
+  height: 100px;
 }
 
-.comment-list .comment-author {
-  font-weight: bold;
+.comment-submit-button {
+  background-color: rgba(208, 208, 208, 0.942);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
 }
 
-.comment-list .comment-date {
-  color: #999;
+.comment-submit-button:hover {
+  background-color: darkblue;
 }
 
-.comment-list .comment-content {
-  margin-top: 10px;
+.additional-button {
+  background-color: orange;
+  margin-left: auto;
 }
 
-/* Additional styles to adjust the layout */
-@media (max-width: 768px) {
-  .container {
-      width: 95%;
-  }
+.problem-detail-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.submit-button,
+.reveal-button {
+  margin-right: 10px;
+}
+
+.additional-button {
+  margin-left: auto;
+  margin-right: 5px;
 }

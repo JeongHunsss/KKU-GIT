@@ -1,60 +1,71 @@
 <?php
-    session_start();
-    $_SESSION['cur_page'] = 'problem_list';
+session_start();
+$_SESSION['cur_page'] = 'problem_list';
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>문제 풀기 페이지</title>
+    <title>문제 리스트</title>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
     <link rel="stylesheet" type="text/css" href="./css/problem_detail.css">
-    <link rel="stylesheet" type="text/css" href="./css/problem_add.css">
 </head>
 <?php include '../bars/top_bar.php'; ?>
-<body> 
-    <div class="container">
-        <h1>문제 풀기 페이지</h1>
-        <div class="problem-header">
-            <h2>제목: ~~~~~~~</h2>
-        </div>
-        <br>
-        <span>등록자: 한유림 | 등록일자: 2022-05-10</span><br><br>
-        <div class="problem-body">
-            <div class="problem-content">
-                <h3>문제 내용</h3><br><br><br><br>
+<body>
+    
+<div class="problem-detail-container">
+  <div class="problem-detail-body">
+
+    <div class="report-buttons">
+      <div>
+        <button class="report-button">&#x26D4; 신고하기</button>
+        <button class="reset-button">&#x1F504; 신고 초기화</button>
+      </div>
+    </div>
+
+
+            <div class="problem-detail-header">
+                <h2>제목: 데이터베이스 sql 관련</h2>
             </div>
-            <div class="problem-choices">
+            <span class="problem-detail-info">등록자: 한유림 | 등록일자: 2022-05-10</span><br><br>
+            <hr>
+            <div class="problem-detail-content">
+                <h3>문제 내용</h3><br><br>
+            </div>
+            <div class="problem-detail-choices">
                 <h3>보기</h3>
                 <form>
-                    <label> 1. 1번 정답 내용</label>
-                    <label> 2. 2번 정답 내용</label>
-                    <label> 3. 3번 정답 내용</label>
-                    <br>
+                    <label> 1. mysql</label><br>
+                    <label> 2. database</label><br>
+                    <label> 3. sql</label><br>
+                    <br><hr><br>
                     <label>정답 입력: <input type="text"></label>
                 </form>
             </div>
-            <div class="problem-buttons">
-                <button>정답 제출</button>
-                <button>정답 공개</button>
+
+            <br><br><br>
+            <div class="problem-detail-buttons">
+            <button class="submit-button">정답 제출</button>
+            <button class="reveal-button" onclick="goBack()">뒤로가기</button>
+            <button class="additional-button">정답 공개</button>
             </div>
         </div>
 
         <br><br><br><br><br><br>
-        <hr>
-        <div class="comment-section">
-            <h3>댓글</h3>
-            <form>
-                <label>댓글 내용</label>
-                <br>
-                <textarea rows="4" cols="50"></textarea>
-                <button type="submit">댓글 등록</button>
 
-                <label>작성자: <input type="text"></label>
-            </form>
-            <div class="comment-list">
+        <div class="problem-detail-comment-section">
+  <form>
+    <label for="comment-input">댓글 내용</label>
+    <br>
+    <textarea id="comment-input" class="comment-textarea"></textarea>
+    <br>
+    <button type="submit" class="comment-submit-button">댓글 등록</button>
+  </form>
+  <br>
+
+            
+            <div class="problem-detail-comment-list">
                 <ul>
                     <li>
                         <span class="comment-author">작성자: 한유림 | </span>
@@ -75,5 +86,12 @@
             </div>
         </div>
     </div>
+
+    <script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
 </body>
 </html>
