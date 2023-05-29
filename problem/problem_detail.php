@@ -13,20 +13,23 @@ $_SESSION['cur_page'] = 'problem_list';
 </head>
 <?php include '../bars/top_bar.php'; ?>
 <body>
-    <div class="problem-detail-container">
-        <div class="problem-detail-body">
+    
+<div class="problem-detail-container">
+  <div class="problem-detail-body">
 
-        <div class="report-buttons">
-            <button class="report-button">&#x26D4 신고하기</button>
-            <button class="reset-button">&#x1F504 신고 초기화</button>
-        </div>
+    <div class="report-buttons">
+      <div>
+        <button class="report-button">&#x26D4; 신고하기</button>
+        <button class="reset-button">&#x1F504; 신고 초기화</button>
+      </div>
+    </div>
 
 
             <div class="problem-detail-header">
                 <h2>제목: 데이터베이스 sql 관련</h2>
             </div>
-            <br>
-            <span>등록자: 한유림 | 등록일자: 2022-05-10</span><br><br>
+            <span class="problem-detail-info">등록자: 한유림 | 등록일자: 2022-05-10</span><br><br>
+            <hr>
             <div class="problem-detail-content">
                 <h3>문제 내용</h3><br><br>
             </div>
@@ -36,7 +39,7 @@ $_SESSION['cur_page'] = 'problem_list';
                     <label> 1. mysql</label><br>
                     <label> 2. database</label><br>
                     <label> 3. sql</label><br>
-                    <br>
+                    <br><hr><br>
                     <label>정답 입력: <input type="text"></label>
                 </form>
             </div>
@@ -44,7 +47,8 @@ $_SESSION['cur_page'] = 'problem_list';
             <br><br><br>
             <div class="problem-detail-buttons">
             <button class="submit-button">정답 제출</button>
-            <button class="reveal-button">정답 공개</button>
+            <button class="reveal-button" onclick="goBack()">뒤로가기</button>
+            <button class="additional-button">정답 공개</button>
             </div>
         </div>
 
@@ -82,5 +86,12 @@ $_SESSION['cur_page'] = 'problem_list';
             </div>
         </div>
     </div>
+
+    <script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 .problem-detail-container {
   flex-direction: column;
   justify-content: center;
@@ -11,11 +10,11 @@
 
 .problem-detail-body {
   width: 700px; 
-  height: 550px; 
+  height: 600px; 
   margin-left: 450px;
   margin-right: auto;
   margin-top: 30px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(229, 228, 224);
   padding: 30px;
   border-radius: 10px;
   box-shadow: inset 0px 0px 0px 1px rgba(187, 194, 199, 0.5);
@@ -25,10 +24,21 @@
 }
 
 .report-buttons {
-  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.report-button {
+
+.report-buttons .report-button,
+.report-buttons .reset-button {
+  margin-left: 10px;
+}
+
+
+.report-button,
+.reset-button,
+.additional-button {
   background-color: red;
   color: white;
   border: none;
@@ -37,6 +47,7 @@
   text-align: center;
   display: inline-block;
   cursor: pointer;
+  
 }
 
 .reset-button {
@@ -48,9 +59,12 @@
   text-align: center;
   display: inline-block;
   cursor: pointer;
-  margin-left: 10px;
+  margin-right: 10px;
 }
 
+.problem-detail-info {
+  font-size: 12px;
+}
 
 .problem-detail-comment-list {
   margin-right: 30px;
@@ -86,7 +100,7 @@
 }
 
 .submit-button {
-  margin-left:220px;
+  margin-left:250px;
   background-color: blue; 
   color: white;
   border: none; 
@@ -99,13 +113,14 @@
 .reveal-button {
   margin-left: 30px;
   margin-right: 30px;
-  background-color: orange; 
+  background-color: #a09a9a; 
   color: white; 
   border: none; 
   border-radius: 5px;
   padding: 10px 20px; 
   text-align: center; 
   display: inline-block; 
+  margin-left: 5px;
 }
 
 .comment-textarea {
@@ -131,4 +146,25 @@
 
 .comment-submit-button:hover {
   background-color: darkblue;
+}
+
+.additional-button {
+  background-color: orange;
+  margin-left: auto;
+}
+
+.problem-detail-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.submit-button,
+.reveal-button {
+  margin-right: 10px;
+}
+
+.additional-button {
+  margin-left: auto;
+  margin-right: 5px;
 }
