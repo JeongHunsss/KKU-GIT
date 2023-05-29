@@ -51,10 +51,6 @@
   background-color: azure;
 }
 
-.rank-box table tr:hover {
-  background-color: rgb(58, 110, 224);
-}
-
 .recent-problem-box {
   grid-column: 2 / 4;
   background-color: azure;
@@ -146,4 +142,8 @@
 
 .third_rank{
   background-color: rgb(173, 138, 96);
+}
+
+.OnMouse:hover{
+  background-color: rgb(218, 217, 217);
 }

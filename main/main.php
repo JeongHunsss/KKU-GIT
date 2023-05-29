@@ -71,7 +71,7 @@
                         echo '</thead>';
                         echo '<tbody>';
                         while ($notice_row = mysqli_fetch_assoc($notice_result)) {
-                            echo "<tr>";
+                            echo "<tr class='OnMouse' onclick=\"location.href='../notice/notice_detail.php?idx=" . $notice_row['idx'] . "'\">";
                             echo "<td>" . $notice_row['idx'] . "</td>";
                             echo "<td>" . $notice_row['title'] . "</td>";
                             echo "<td>" . $notice_row['author_name'] . "</td>";
@@ -103,13 +103,13 @@
                                 $rank = 1;
                                 while ($rank_row = mysqli_fetch_assoc($rank_result)) {
                                     if($rank == 1){
-                                        echo '<tr class="first_rank">';
+                                        echo "<tr class='first_rank OnMouse'>";
                                     }else if($rank == 2){
-                                        echo '<tr class="second_rank">';
+                                        echo "<tr class='second_rank OnMouse'>";
                                     }else if($rank == 3){
-                                        echo '<tr class="third_rank">';
+                                        echo "<tr class='third_rank OnMouse'>";
                                     }else{
-                                        echo '<tr>';
+                                        echo "<tr class='OnMouse'>";
                                     }
                                     echo "<td>" . $rank . "</td>";
                                     echo "<td>" . $rank_row['name'] . " (" . $rank_row['grade'] . ")</td>";
@@ -141,7 +141,7 @@
                             echo '</thead>';
                             echo '<tbody>';
                         while ($problem_row = mysqli_fetch_assoc($problem_result)) {
-                            echo "<tr>";
+                            echo "<tr class='OnMouse' onclick=\"location.href='../problem/problem_detail.php?idx=" . $problem_row['idx'] . "'\">";
                             echo "<td>" . $problem_row['idx'] . "</td>";
                             echo "<td>" . $problem_row['subject'] . "</td>";
                             echo "<td>" . $problem_row['title'] . "</td>";
