@@ -1,11 +1,51 @@
 <?php
-session_start();
-$_SESSION['cur_page'] = 'problem_list';
+    session_start();
+    $_SESSION['cur_page'] = 'problem_list';
+    include '../config/dbconfig.php';
+
+    $user_id = $_SESSION['user_id']; // 쿼리문에 사용할 id 변수
+
+    // 문제 정보 가져오기
+    $problemIdx = $_GET['idx'];  // GET 메소드를 통해 전달
+
+    // 문제 정보 조회 쿼리
+    $problemQuery = "SELECT * FROM problem_list WHERE idx = $problemIdx";
+    $problemResult = mysqli_query($conn, $problemQuery);
+    $problemData = mysqli_fetch_assoc($problemResult);
+
+    //정답 제출 버튼 눌렸을 시 (푼 문제 테이블에 저장, 5포인트 주기)
+    if(isset($_POST['submit_answer'])){
+        $IsSolved = "SELECT * FROM solved_problem WHERE user_id = '$user_id' AND problem_idx = $problemIdx";
+        $IsSolvedResult = mysqli_query($conn, $IsSolved);
+        if(mysqli_num_rows($IsSolvedResult) === 0){      // 이미 푼 문제인지 검사
+            $user_answer = $_POST['user_answer'];  // 사용자가 입력한 정답
+            if($user_answer === $problemData['answer']){ //입력한 정답과 실제 문제 답이 일치할 시
+                $query = "INSERT INTO solved_problem VALUES ('$user_id', $problemIdx)";
+                mysqli_query($conn, $query);             // 푼 문제 테이블에 저장
+                $query = "UPDATE user SET point = point + 5 WHERE id = '$user_id'";  // 해당 유저에게 5점 추가
+                mysqli_query($conn, $query);
+                echo '<script>alert("정답입니다!");</script>';
+                echo '<script>window.location.href = "problem_list.php";</script>';
+            } else{
+                echo '<script>alert("오답입니다!");</script>';
+            }
+        } else {
+            echo '<script>alert("이미 푼 문제 입니다.");</script>';
+        }
+    }
+
+    //정답 공개 버튼 눌렸을 시 (푼 문제 테이블에 저장, 포인트는 X)
+    if(isset($_POST['answer_open'])){
+        $query = "INSERT INTO solved_problem VALUES ('$user_id', $problemIdx)";
+        mysqli_query($conn, $query); 
+        echo '<script>alert("정답은 ' . $problemData['answer'] . ' 입니다!");</script>';
+    }
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>문제 리스트</title>
+    <title>문제 풀기</title>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../bars/css/top_bar.css">
@@ -25,31 +65,44 @@ $_SESSION['cur_page'] = 'problem_list';
     </div>
 
 
-            <div class="problem-detail-header">
-                <h2>제목: 데이터베이스 sql 관련</h2>
-            </div>
-            <span class="problem-detail-info">등록자: 한유림 | 등록일자: 2022-05-10</span><br><br>
-            <hr>
+    
+    <div class='problem-detail-header'>
+    <?php
+        // 문제 정보 출력
+        echo "<h2>제목: " . $problemData['title'] . "</h2>";
+        echo "</div>";
+        echo "<span class='problem-detail-info'>등록자: " . $problemData['author'] . " | 등록일자: " . $problemData['date'] . "</span><br><br>";
+    ?> 
+        <hr>
             <div class="problem-detail-content">
-                <h3>문제 내용</h3><br><br>
+                <?php
+                    echo "<h3>문제 내용</h3>";
+                    echo $problemData['content'];
+                ?>
             </div>
             <div class="problem-detail-choices">
                 <h3>보기</h3>
-                <form>
-                    <label> 1. mysql</label><br>
-                    <label> 2. database</label><br>
-                    <label> 3. sql</label><br>
+            
+                    <?php
+                        echo "<label> 1. " . $problemData['choice1'] . "</label><br>";
+                        echo "<label> 2. " . $problemData['choice2'] . "</label><br>";
+                        echo "<label> 3. " . $problemData['choice3'] . "</label><br>";
+                    ?>
                     <br><hr><br>
-                    <label>정답 입력: <input type="text"></label>
-                </form>
+                <form method="post">
+                    <label>정답 입력: <input type="text" name="user_answer"></label>
+            
             </div>
 
-            <br><br><br>
-            <div class="problem-detail-buttons">
-            <button class="submit-button">정답 제출</button>
-            <button class="reveal-button" onclick="goBack()">뒤로가기</button>
-            <button class="additional-button">정답 공개</button>
-            </div>
+                    <br><br><br>
+                    <div class="problem-detail-buttons">
+                
+                    <button class="submit-button" name="submit_answer">정답 제출</button>
+                    
+                    <div class="reveal-button" onclick="location.href='../problem/problem_list.php'">목록으로</div>
+                    <button class="additional-button" name="answer_open">정답 공개</button>
+                    </div>
+                </form>
         </div>
 
         <br><br><br><br><br><br>
@@ -86,12 +139,6 @@ $_SESSION['cur_page'] = 'problem_list';
             </div>
         </div>
     </div>
-
-    <script>
-    function goBack() {
-        window.history.back();
-    }
-</script>
 
 </body>
 </html>

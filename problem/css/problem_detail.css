@@ -63,7 +63,7 @@
 }
 
 .problem-detail-info {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .problem-detail-comment-list {
@@ -167,4 +167,8 @@
 .additional-button {
   margin-left: auto;
   margin-right: 5px;
+}
+
+button{
+  font-family: 'Jua', sans-serif;
 }
