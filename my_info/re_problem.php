@@ -47,7 +47,7 @@
                     <tbody>
                     <?php
                         while ($row = mysqli_fetch_assoc($regProInfoResult)) {
-                            echo "<tr>";
+                            echo "<tr class='OnMouse' onclick=\"location.href='../problem/problem_detail.php?idx=" . $row['idx'] . "'\">";
                             echo "<td>" . $row['idx'] . "</td>";
                             echo "<td>" . $row['subject'] . "</td>";
                             echo "<td>" . $row['title'] . "</td>";
