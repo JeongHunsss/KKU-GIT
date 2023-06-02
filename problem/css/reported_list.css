@@ -15,41 +15,6 @@
     margin-left: 3%;
 }
 
-.reported_container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: auto;
-    margin-bottom: 1%;
-}
-
-form.search_form {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-}
-
-.reported_container form input[type="text"] {
-    width: 18.7rem;
-    height: 1.875rem;
-    font-size: 1rem;
-    margin-right: 0.625rem;
-    margin-left: 3%;
-    padding: 0.3125rem;
-  }
-
-.search_btn{
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 0.3125rem;
-    cursor: pointer;
-    text-decoration: none;
-    background-color: rgb(253, 195, 108);
-    font-family: 'Jua', sans-serif;
-}
-
 table {
     margin-top: 3%;
     width: 94%;
@@ -59,47 +24,48 @@ table {
 }
 
 th, td {
-    border: 1px solid #dee2e6;
     padding: 10px;
     text-align: center;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: rgb(58, 110, 224);
     font-weight: bold;
+    color: #FFFFFF;
 }
 
-th:first-child,
-td:first-child {
-    border-left: 1px solid #dee2e6;
+.idx{
+    width: 3%;
+}
+   
+.subject{
+    width: 15%;
+}
+   
+.title{
+    width: 45%;
+}
+   
+.author{
+    width: 8%;
+}
+   
+.date{
+    width: 8%;
 }
 
-th:last-child,
-td:last-child {
-    border-right: 1px solid #dee2e6;
+.report{
+    width: 5%;
 }
-/*페이지네이션*/
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.25rem;
-  }
-  
-  .pagination a {
-    color: black;
-    float: left;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
-  
-  .pagination a.active {
-    /* background-color: #4CAF50; */
-    color: white;
-    border: 1px solid #4CAF50;
-  }
-  
-  .pagination a:hover:not(.active) {
-    background-color: rgb(221, 218, 218);
-  }
+
+.OnMouse:hover{
+    background-color: rgb(218, 217, 217);
+}
+
+.prob_contents {
+    border-bottom: 1px solid gray;
+}
+.prob_contents2 {
+    border-bottom: 1px solid gray;
+    background-color: azure;
+}
