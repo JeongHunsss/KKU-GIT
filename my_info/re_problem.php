@@ -12,7 +12,12 @@
     $totalCount = mysqli_fetch_assoc($countResult)['total'];
 
     // 등록한 문제 정보 가져오기
-    $regProInfoQuery = "SELECT * FROM problem_list WHERE author = '$query_id' ORDER BY idx DESC LIMIT $startIndex, $resultsPerPage";
+    $regProInfoQuery = "SELECT p.idx, p.subject, p.title, u.name AS author_name, p.date
+                        FROM problem_list AS p
+                        JOIN user AS u ON p.author = u.id
+                        WHERE p.author = '$query_id'
+                        ORDER BY p.idx DESC 
+                        LIMIT $startIndex, $resultsPerPage";
     $regProInfoResult = mysqli_query($conn, $regProInfoQuery);
 
 ?>
@@ -51,7 +56,7 @@
                             echo "<td>" . $row['idx'] . "</td>";
                             echo "<td>" . $row['subject'] . "</td>";
                             echo "<td>" . $row['title'] . "</td>";
-                            echo "<td>" . $row['author'] . "</td>";
+                            echo "<td>" . $row['author_name'] . "</td>";
                             echo "<td>" . $row['date'] . "</td>";
                             echo "</tr>";
                         }
@@ -59,11 +64,12 @@
                     </tbody>
                 </table>
                 </div>
-                <!-- 페이지네이션 -->
-                <?php
-                    include '../bars/pagination_bar.php';
-                ?>
-            
+        </div>
+        <div class="pagination-font">
+            <!-- 페이지네이션 -->
+            <?php
+                include '../bars/pagination_bar.php';
+            ?>
         </div>
 </body>
 </html>

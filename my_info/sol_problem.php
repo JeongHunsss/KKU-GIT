@@ -13,11 +13,13 @@
     $totalCount = mysqli_fetch_assoc($countResult)['total'];
 
     // 푼 문제 정보 가져오기
-    $solProInfoQuery = "SELECT * FROM solved_problem AS s
-                         JOIN problem_list AS p ON s.problem_idx = p.idx
-                         WHERE s.user_id = '$query_id'
-                         ORDER BY p.idx DESC
-                         LIMIT $startIndex, $resultsPerPage";
+    $solProInfoQuery = "SELECT p.*, u.name AS author_name 
+                        FROM solved_problem AS s
+                        JOIN problem_list AS p ON s.problem_idx = p.idx
+                        JOIN user AS u ON s.user_id = u.id
+                        WHERE s.user_id = '$query_id'
+                        ORDER BY p.idx DESC
+                        LIMIT $startIndex, $resultsPerPage";
     $solProInfoResult = mysqli_query($conn, $solProInfoQuery);
 
 ?>
@@ -58,7 +60,7 @@
                         echo "<td>" . $row['idx'] . "</td>";
                         echo "<td>" . $row['subject'] . "</td>";
                         echo "<td>" . $row['title'] . "</td>";
-                        echo "<td>" . $row['author'] . "</td>";
+                        echo "<td>" . $row['author_name'] . "</td>";
                         echo "<td>" . $row['date'] . "</td>";
                         echo "</tr>";
                     }
@@ -66,6 +68,8 @@
                 </tbody>
             </table>
             </div>
+    </div>        
+    <div class="pagination-font">
             <!-- 페이지네이션 -->
             <?php
                 include '../bars/pagination_bar.php';
