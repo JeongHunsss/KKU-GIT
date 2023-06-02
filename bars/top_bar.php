@@ -14,7 +14,7 @@
         <div class="menu">
             <div class="link
                 <?php echo ($_SESSION['cur_page'] === 'notice') ? 'current-page' : ''; ?>" 
-                onclick="location.href='../notice/notice_list.php'">
+                onclick="location.href='../notice/notice_list.php?title=all'">
                 공지사항
             </div>
             <div class="link 
@@ -24,7 +24,7 @@
             </div>
             <div class="link 
                 <?php echo ($_SESSION['cur_page'] === 'problem_list') ? 'current-page' : ''; ?>" 
-                onclick="location.href='../problem/problem_list.php'">
+                onclick="location.href='../problem/problem_list.php?subject=all'">
                 문제 풀기
             </div>
             <?php
