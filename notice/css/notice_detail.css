@@ -79,25 +79,44 @@
 }
 
 .detail_content {
+  overflow: auto; /* 높이를 초과하는 내용이 있을 경우 스크롤바 표시 */
+  word-wrap: break-word; /* 긴 단어를 줄바꿈하여 표시 */
   text-align: left;
   margin-bottom: 1.25%;
   font-family: 'Jua', sans-serif;
   width: 100%;
   padding: auto;
 }
+
 .cnt{
   margin-left: 3%;
   margin-right: 3%;
 }
+
 .notice_button {
   text-align: right;
   height: 100%;
   width: 100%;
 }
 
+.reveal-button {
+  display: inline-block;
+  margin-top: 0.625%;
+  padding: 1.25%; /* Increase the padding for a larger button */
+  background-color: #a09a9a;
+  color: #fff;
+  border: none;
+  border-radius: 5px; /* Increase the border radius for a rounder button */
+  cursor: pointer;
+  font-family: 'Jua', sans-serif;
+  width: 85px; /* Increased the width to 10% */
+  height: 46px;
+}
+
 .edit-button {
   display: inline-block;
   margin-top: 0.625%;
+  margin-right: 5px;
   padding: 1.25%; /* Increase the padding for a larger button */
   background-color: #007bff;
   color: #fff;
@@ -105,7 +124,8 @@
   border-radius: 5px; /* Increase the border radius for a rounder button */
   cursor: pointer;
   font-family: 'Jua', sans-serif;
-  width: 7%; /* Increased the width to 10% */
+  width: 85px; /* Increased the width to 10% */
+  height: 46px;
 }
 
 .delete-button {
@@ -113,11 +133,19 @@
   /* margin-top: 0.625%; */
   /* margin-left: 0.625%; */
   padding: 1.25%; /* Increase the padding for a larger button */
-  background-color: rgb(253, 195, 108);
+  background-color: rgb(255, 0, 0);
   color: #fff;
   border: none;
   border-radius: 5px; /* Increase the border radius for a rounder button */
   cursor: pointer;
   font-family: 'Jua', sans-serif;
-  width: 7%; /* Increased the width to 10% */
+  width: 100%; /* Increased the width to 10% */
+  height: 46px;
+}
+
+.button-form{
+  display: inline-block;
+  margin-right: 5px;
+  width: 85px;
+  height: 46px;
 }

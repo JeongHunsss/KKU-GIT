@@ -1,6 +1,44 @@
 <?php
     session_start();
     $_SESSION['cur_page'] = 'notice';
+    include '../config/dbconfig.php';
+
+    // 글 인덱스 가져오기
+    $noticeIdx = $_GET['idx'];  // GET 메소드를 통해 전달
+
+    // 글 정보 쿼리
+    $noticeQuery = "SELECT n.*, u.name AS author_name FROM notice AS n
+                    JOIN user AS u ON u.id = n.author
+                    WHERE n.idx = $noticeIdx";
+    $noticeResult = mysqli_query($conn, $noticeQuery);
+    $noticeData = mysqli_fetch_assoc($noticeResult);
+
+    // 삭제 버튼이 눌렸을 때
+    if (isset($_POST['delete-btn'])) {
+        $delete_query = "DELETE FROM notice WHERE idx = $noticeIdx";
+        mysqli_query($conn, $delete_query);
+
+        // 데이터 백업
+        $backup_query = "SELECT * FROM notice";
+        $backup_result = mysqli_query($conn, $backup_query);
+
+        // 테이블의 autoincrement를 1부터로 재정렬
+        $reorder_query = "DELETE FROM notice";    // TRUNCATE는 외래키 제약조건 때문에 실행X
+        mysqli_query($conn, $reorder_query);
+        $alter_query = "ALTER TABLE notice AUTO_INCREMENT = 1";
+        mysqli_query($conn, $alter_query);
+
+        // 백업된 데이터를 다시 삽입
+        while ($row = mysqli_fetch_assoc($backup_result)) {
+            $insert_query = "INSERT INTO notice (title, content, author, date)
+                            VALUES ('$row[title]', '$row[content]', '$row[author]', '$row[date]')";
+            mysqli_query($conn, $insert_query);
+        }
+
+        echo '<script>alert("삭제 완료");</script>';
+        echo "<script>window.location.href='../notice/notice_list.php?title=all'</script>";
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -21,29 +59,40 @@
         <div class="detail_container">
             <div class="detail_notice">
                 <div class="detail_title">
-                    <h2 class="detail-h2">제목</h2>
+                    <?php
+                        echo '<h2 class="detail-h2">'.$noticeData['title'].'</h2>';
+                    ?>
                 </div>
                 <div class="detail_info">
-                    <p>작성일 <span class="date">2023-05-12</span></p> 
+                    <?php
+                        echo '<p>작성일 ' . $noticeData['date'] . ' | 작성자 ' . $noticeData['author_name'] . '</p>'; 
+                    ?>
                 </div>
                 <div class="detail_content">
-                    <p class="cnt">내용가리lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
-                        llllllllllllllllllllllllllllllllllllll
-                    </p>
+                    <?php
+                        echo '<p class="cnt">' . $noticeData['content'] . '</p>';
+                    ?>
                 </div>
             </div>
             <div class="notice_button">
-                <button type="button" class="edit-button" onclick="location.href='notice_add.php'">수정</button>
-                <button type="button" class="delete-button" onclick="confirmDelete()">삭제</button>
+                <button class="reveal-button" onclick="location.href='notice_list.php?title=all'">목록으로</button>
+                <?php
+                    if($_SESSION['user_id'] === 'admin'){
+                        echo '<form class="button-form" method="post" action="notice_add.php?idx=' . $noticeData['idx'] . '">';
+                        echo '<button type="submit" class="edit-button">수정</button>';
+                        echo '</form>';
+                        echo '<form class="button-form" method="post" onsubmit="return confirmDelete()">';
+                        echo '<button type="submit" class="delete-button" name="delete-btn">삭제</button>';
+                        echo '</form>';
+                    }
+                ?>
             </div>
         </div>
     </div>
 
     <script>
         function confirmDelete() {
-            if(confirm("정말로 삭제하시겠습니까?")) {
-                location.href = "notice_delete.php";
-            }
+            return confirm("정말로 삭제하시겠습니까?");
         }
     </script>
 </body>
