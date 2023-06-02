@@ -25,7 +25,7 @@
         $rank_no_result = '랭킹 데이터가 없습니다.';
     }
 
-    // 최근 등록 문제 데이터 가져오기
+    // 최근 등록 문제 데이터 가져오기 (작성자는 아이디가 아닌 이름으로)
     $problem_query = "SELECT p.idx, p.subject, p.title, u.name AS author_name, p.date
                                 FROM problem_list AS p
                                 JOIN user AS u ON p.author = u.id
@@ -48,9 +48,9 @@
     <?php include '../bars/top_bar.php'; ?>
     <body>
         <div class="banner">
-            <img src="../img/banner.PNG" alt="Banner" class="banner-img active">
-            <img src="../img/banner2.PNG" alt="Banner 2" class="banner-img inactive">
-            <img src="../img/banner3.PNG" alt="Banner 3" class="banner-img inactive">
+            <img src="../img/banner1.jpg" alt="Banner" class="banner-img active">
+            <img src="../img/banner2.jpg" alt="Banner 2" class="banner-img inactive">
+            <img src="../img/banner3.jpg" alt="Banner 3" class="banner-img inactive">
         </div>
 
         <div class="content-wrapper">
@@ -82,7 +82,7 @@
                         echo '</table>';
                     }
                 ?>
-                <div class="more-btn" onclick="location.href='../notice/notice_list.php'">더보기+</div>
+                <div class="more-btn" onclick="location.href='../notice/notice_list.php?title=all'">더보기+</div>
             </div>
 
             <div class="rank-box">
@@ -153,7 +153,7 @@
                         echo '</table>';
                     }
                 ?>
-                <div class="more-btn" onclick="location.href='../problem/problem_list.php'">더보기+</div>
+                <div class="more-btn" onclick="location.href='../problem/problem_list.php?subject=all'">더보기+</div>
             </div>
         </div>
 
