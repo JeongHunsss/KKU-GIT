@@ -85,8 +85,8 @@ if (isset($_POST['email_send'])) {
 }
 //인증코드 확인
 if (isset($_POST['code_check'])) {
-    $verification_code = $_POST['verification_code'];
-    if($verification_code == $_SESSION['verification_code']){
+    $input_verification_code = $_POST['verification_code'];
+    if($input_verification_code == $_SESSION['verification_code']){
         $_SESSION['isChecking'] = 1;
         $code = rand(10000, 99999);
         $_SESSION['verification_code'] = $code;  // 세션변수 무작위로 변경
