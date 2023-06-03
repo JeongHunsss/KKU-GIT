@@ -5,15 +5,15 @@ include '../config/dbconfig.php';
 
 // 초기화
 $isSend = 0; // 메일 보내기 성공 여부
-if (!isset($_SESSION['is_duplication'])) {
+if (!isset($_SESSION['is_duplication'])) {    // 아이디 중복확인 여부
     $_SESSION['is_duplication'] = 0;
 }
 
-if (!isset($_SESSION['isChecking'])) {
+if (!isset($_SESSION['isChecking'])) {    // 이메일 인증 여부
     $_SESSION['isChecking'] = 0;
 }
 
-// 회원가입
+// 회원가입 버튼 눌렸을 시
 if (isset($_POST['regist'])) {
     $user_id = $_POST['user_id'];
     $password = $_POST['password'];
@@ -36,7 +36,7 @@ if (isset($_POST['regist'])) {
                     echo '<script>alert("회원가입이 완료되었습니다.");</script>';
                     // 회원가입 완료 후 홈페이지로 이동
                     echo '<script>window.location.href = "login.php";</script>';
-                    exit(); // 페이지 이동 후 코드가 실행되는 것을 방지하기 위해 exit() 함수 사용
+                    exit();
                 } else {
                     echo '<script>alert("이메일 인증과 아이디 중복확인을 해야합니다.");</script>';
                 }
