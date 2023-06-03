@@ -24,7 +24,7 @@ if (isset($_POST['submit_add'])) {
     mysqli_query($conn, $addQuery);
     // 10점 추가
     $query = "UPDATE user SET point = point + 10 WHERE id = '$user_id'";
-     mysqli_query($conn, $query);
+    mysqli_query($conn, $query);
 
     echo '<script>alert("문제가 등록되었습니다. +10점");</script>';
     echo '<script>window.location.href = "../problem/problem_list.php?subject=all";</script>';
@@ -44,12 +44,12 @@ if (isset($_POST['submit_add'])) {
 </head>
 <body>
     <div class="container-add">
-        <form class ="form-add" method="post">
+        <form class="form-add" method="post">
             <hr style="border-width: 0; border-top: 1px solid #ccc; width: 110%;">
             <label class="label-add" for="subject">과목<div style="color: red;">*</div></label>
-            <select class ="subject-input" name="subject" id="subject" required>
+            <select class="subject-input" name="subject" id="subject" required>
                 <?php 
-                    while ($subjects = mysqli_fetch_assoc($subjectResult)){
+                    while ($subjects = mysqli_fetch_assoc($subjectResult)) {
                         echo "<option value=\"{$subjects['subject']}\">{$subjects['subject']}</option>";
                     }   
                 ?>

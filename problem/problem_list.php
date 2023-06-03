@@ -1,42 +1,42 @@
 <?php
-    session_start();
-    $_SESSION['cur_page'] = 'problem_list';
+session_start();
+$_SESSION['cur_page'] = 'problem_list';
 
-    include '../config/dbconfig.php';
-    include '../config/pagination_config.php';
+include '../config/dbconfig.php';
+include '../config/pagination_config.php';
 
-    // 검색어 설정
-    $search_subject = $_GET['subject'];
+// 검색어 설정
+$search_subject = $_GET['subject'];
 
-    // 과목 목록 가져오기
-    $subjectQuery = "SELECT * FROM subject_list";
-    $subjectResult = mysqli_query($conn, $subjectQuery);
+// 과목 목록 가져오기
+$subjectQuery = "SELECT * FROM subject_list";
+$subjectResult = mysqli_query($conn, $subjectQuery);
 
-    // 문제의 총 개수 조회
-    if($search_subject === 'all'){  // 전체 검색의 경우
-        $countQuery = "SELECT COUNT(*) AS total FROM problem_list";
-        $countResult = mysqli_query($conn, $countQuery);
-        $totalCount = mysqli_fetch_assoc($countResult)['total'];
-    } else{   // 검색어가 있는 경우
-        $countQuery = "SELECT COUNT(*) AS total FROM problem_list WHERE subject = '$search_subject'";
-        $countResult = mysqli_query($conn, $countQuery);
-        $totalCount = mysqli_fetch_assoc($countResult)['total'];
-    }
+// 문제의 총 개수 조회
+if ($search_subject === 'all') { // 전체 검색의 경우
+    $countQuery = "SELECT COUNT(*) AS total FROM problem_list";
+    $countResult = mysqli_query($conn, $countQuery);
+    $totalCount = mysqli_fetch_assoc($countResult)['total'];
+} else { // 검색어가 있는 경우
+    $countQuery = "SELECT COUNT(*) AS total FROM problem_list WHERE subject = '$search_subject'";
+    $countResult = mysqli_query($conn, $countQuery);
+    $totalCount = mysqli_fetch_assoc($countResult)['total'];
+}
 
-    // 현재 페이지 설정
-    $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
-    $startIndex = ($currentPage - 1) * $resultsPerPage;
+// 현재 페이지 설정
+$currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
+$startIndex = ($currentPage - 1) * $resultsPerPage;
 
-    // 문제 데이터 가져오기
-    $problem_query = "SELECT p.idx, p.subject, p.title, u.name AS author_name, p.date
-                        FROM problem_list AS p
-                        JOIN user AS u ON p.author = u.id";
-    if ($search_subject && $search_subject !== 'all') {
-        $problem_query .= " WHERE p.subject = '$search_subject'";
-    }
-    $problem_query .= " ORDER BY p.idx DESC
-                        LIMIT $startIndex, $resultsPerPage";
-    $problem_result = mysqli_query($conn, $problem_query);
+// 문제 데이터 가져오기
+$problem_query = "SELECT p.idx, p.subject, p.title, u.name AS author_name, p.date
+                    FROM problem_list AS p
+                    JOIN user AS u ON p.author = u.id";
+if ($search_subject && $search_subject !== 'all') {
+    $problem_query .= " WHERE p.subject = '$search_subject'";
+}
+$problem_query .= " ORDER BY p.idx DESC
+                    LIMIT $startIndex, $resultsPerPage";
+$problem_result = mysqli_query($conn, $problem_query);
 ?>
 <!DOCTYPE html>
 <html>
@@ -81,7 +81,7 @@
                 <tbody>
                     <?php
                         while ($problem_row = mysqli_fetch_assoc($problem_result)) {
-                            if($problem_row['idx'] % 2 == 1){
+                            if ($problem_row['idx'] % 2 == 1) {
                                 echo "<tr class='OnMouse prob_contents' onclick=\"location.href='../problem/problem_detail.php?idx=" . $problem_row['idx'] . "'\">";
                                 echo "<td>" . $problem_row['idx'] . "</td>";
                                 echo "<td>" . $problem_row['subject'] . "</td>";
@@ -89,7 +89,7 @@
                                 echo "<td>" . $problem_row['author_name'] . "</td>";
                                 echo "<td>" . $problem_row['date'] . "</td>";
                                 echo "</tr>";
-                            } else{
+                            } else {
                                 echo "<tr class='OnMouse prob_contents2' onclick=\"location.href='../problem/problem_detail.php?idx=" . $problem_row['idx'] . "'\">";
                                 echo "<td>" . $problem_row['idx'] . "</td>";
                                 echo "<td>" . $problem_row['subject'] . "</td>";
@@ -103,10 +103,10 @@
                 </tbody>
             </table>
         </div>
-            <!-- 페이지네이션 -->
-            <?php
-                include '../bars/pagination_bar.php';
-            ?>
+        <!-- 페이지네이션 -->
+        <?php
+            include '../bars/pagination_bar.php';
+        ?>
     </div>
 
 </body>

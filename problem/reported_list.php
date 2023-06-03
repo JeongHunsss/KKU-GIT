@@ -1,21 +1,21 @@
 <?php
-    session_start();
-    $_SESSION['cur_page'] = 'reported_list';
-    include '../config/dbconfig.php';
-    include '../config/pagination_config.php';
+session_start();
+$_SESSION['cur_page'] = 'reported_list';
+include '../config/dbconfig.php';
+include '../config/pagination_config.php';
 
-    $countQuery = "SELECT COUNT(*) AS total FROM problem_list";
-    $countResult = mysqli_query($conn, $countQuery);
-    $totalCount = mysqli_fetch_assoc($countResult)['total'];
+$countQuery = "SELECT COUNT(*) AS total FROM problem_list";
+$countResult = mysqli_query($conn, $countQuery);
+$totalCount = mysqli_fetch_assoc($countResult)['total'];
 
-    // 문제 데이터 가져오기
-    $problem_query = "SELECT p.idx, p.subject, p.title, u.name AS author_name, p.date, p.report
-                        FROM problem_list AS p
-                        JOIN user AS u ON p.author = u.id
-                        WHERE p.report >= 10
-                        ORDER BY p.report DESC
-                        LIMIT $startIndex, $resultsPerPage";
-    $problem_result = mysqli_query($conn, $problem_query);
+// 문제 데이터 가져오기
+$problem_query = "SELECT p.idx, p.subject, p.title, u.name AS author_name, p.date, p.report
+                    FROM problem_list AS p
+                    JOIN user AS u ON p.author = u.id
+                    WHERE p.report >= 10
+                    ORDER BY p.report DESC
+                    LIMIT $startIndex, $resultsPerPage";
+$problem_result = mysqli_query($conn, $problem_query);
 ?>
 
 <!DOCTYPE html>
@@ -46,38 +46,36 @@
             <tbody>
                 <?php
                 $num = 0;
-                    while ($problem_row = mysqli_fetch_assoc($problem_result)) {
-                        if($num % 2 == 1){
-                            echo "<tr class='OnMouse prob_contents' onclick=\"location.href='../problem/problem_detail.php?idx=" . $problem_row['idx'] . "'\">";
-                            echo "<td>" . $problem_row['idx'] . "</td>";
-                            echo "<td>" . $problem_row['subject'] . "</td>";
-                            echo "<td>" . $problem_row['title'] . "</td>";
-                            echo "<td>" . $problem_row['author_name'] . "</td>";
-                            echo "<td>" . $problem_row['date'] . "</td>";
-                            echo "<td>" . $problem_row['report'] . "</td>";
-                            echo "</tr>";
-                            $num = $num+1;
-                        } else{
-                            echo "<tr class='OnMouse prob_contents2' onclick=\"location.href='../problem/problem_detail.php?idx=" . $problem_row['idx'] . "'\">";
-                            echo "<td>" . $problem_row['idx'] . "</td>";
-                            echo "<td>" . $problem_row['subject'] . "</td>";
-                            echo "<td>" . $problem_row['title'] . "</td>";
-                            echo "<td>" . $problem_row['author_name'] . "</td>";
-                            echo "<td>" . $problem_row['date'] . "</td>";
-                            echo "<td>" . $problem_row['report'] . "</td>";
-                            echo "</tr>";
-                            $num = $num+1;
-                        }
+                while ($problem_row = mysqli_fetch_assoc($problem_result)) {
+                    if ($num % 2 == 1) {
+                        echo "<tr class='OnMouse prob_contents' onclick=\"location.href='../problem/problem_detail.php?idx=" . $problem_row['idx'] . "'\">";
+                        echo "<td>" . $problem_row['idx'] . "</td>";
+                        echo "<td>" . $problem_row['subject'] . "</td>";
+                        echo "<td>" . $problem_row['title'] . "</td>";
+                        echo "<td>" . $problem_row['author_name'] . "</td>";
+                        echo "<td>" . $problem_row['date'] . "</td>";
+                        echo "<td>" . $problem_row['report'] . "</td>";
+                        echo "</tr>";
+                        $num = $num + 1;
+                    } else {
+                        echo "<tr class='OnMouse prob_contents2' onclick=\"location.href='../problem/problem_detail.php?idx=" . $problem_row['idx'] . "'\">";
+                        echo "<td>" . $problem_row['idx'] . "</td>";
+                        echo "<td>" . $problem_row['subject'] . "</td>";
+                        echo "<td>" . $problem_row['title'] . "</td>";
+                        echo "<td>" . $problem_row['author_name'] . "</td>";
+                        echo "<td>" . $problem_row['date'] . "</td>";
+                        echo "<td>" . $problem_row['report'] . "</td>";
+                        echo "</tr>";
+                        $num = $num + 1;
                     }
+                }
                 ?>
             </tbody>
         </table>    
-            <!-- 페이지네이션 -->
-            <?php
-                include '../bars/pagination_bar.php';
-            ?>
+        <!-- 페이지네이션 -->
+        <?php
+        include '../bars/pagination_bar.php';
+        ?>
     </div>
 </body>
 </html>
-
-<script>

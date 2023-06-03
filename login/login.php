@@ -36,20 +36,20 @@ if (isset($_POST['login'])) {
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 </head>
 <body class="login-body">
-<form method="post" class="login-form">
-    <h2>KKU-GIT 로그인</h2>
-    <?php
-        if($error){
-            echo "<div class='login-error' >".$error."</div>";
+    <form method="post" class="login-form">
+        <h2>KKU-GIT 로그인</h2>
+        <?php
+        if ($error) {
+            echo "<div class='login-error'>" . $error . "</div>";
         }
-    ?>
-    <label class="login-label" for="user_id">아이디</label>
-    <input class="login-input" type="text" id="user_id" name="user_id" required>
-    <label class="login-label" for="password">비밀번호</label>
-    <input class="login-input" type="password" id="password" name="password" required>
-    <button class="login-button" type="submit" name="login">로그인</button>
-    <div><hr style="border-width 1px; border-color:#ccc;"></div>
-    <button class="regist-button" onclick="location.href='register.php'">회원가입</button>
-</form>
+        ?>
+        <label class="login-label" for="user_id">아이디</label>
+        <input class="login-input" type="text" id="user_id" name="user_id" required>
+        <label class="login-label" for="password">비밀번호</label>
+        <input class="login-input" type="password" id="password" name="password" required>
+        <button class="login-button" type="submit" name="login">로그인</button>
+        <div><hr style="border-width: 1px; border-color:#ccc;"></div>
+        <button class="regist-button" onclick="location.href='register.php'">회원가입</button>
+    </form>
 </body>
 </html>
