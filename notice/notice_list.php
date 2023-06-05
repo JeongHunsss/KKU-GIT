@@ -28,7 +28,7 @@ $notice_query = "SELECT n.idx, n.title, u.name AS author_name, n.date
 FROM notice AS n
 JOIN user AS u ON n.author = u.id";
 if ($search_title && $search_title !== 'all') {
-    $notice_query .= " WHERE n.title = '$search_title'";
+    $notice_query .= " WHERE n.title LIKE '%$search_title%'";
 }
 $notice_query .= " ORDER BY n.idx DESC
 LIMIT $startIndex, $resultsPerPage";
