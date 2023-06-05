@@ -14,7 +14,7 @@ if ($search_title === 'all') {  // 전체 검색의 경우
     $countResult = mysqli_query($conn, $countQuery);
     $totalCount = mysqli_fetch_assoc($countResult)['total'];
 } else {   // 검색어가 있는 경우
-    $countQuery = "SELECT COUNT(*) AS total FROM notice WHERE title = '$search_title'";
+    $countQuery = "SELECT COUNT(*) AS total FROM notice WHERE title LIKE '%$search_title%'";
     $countResult = mysqli_query($conn, $countQuery);
     $totalCount = mysqli_fetch_assoc($countResult)['total'];
 }
