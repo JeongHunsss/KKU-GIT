@@ -4,7 +4,7 @@ $_SESSION['cur_page'] = 'reported_list';
 include '../config/dbconfig.php';
 include '../config/pagination_config.php';
 
-$countQuery = "SELECT COUNT(*) AS total FROM problem_list";
+$countQuery = "SELECT COUNT(*) AS total FROM problem_list WHERE report >= 10";
 $countResult = mysqli_query($conn, $countQuery);
 $totalCount = mysqli_fetch_assoc($countResult)['total'];
 
@@ -31,7 +31,7 @@ $problem_result = mysqli_query($conn, $problem_query);
 <?php include '../bars/top_bar.php'; ?>
 <body>      
     <div class="cont">
-        <h1 class="reported_title">신고받은 문제리스트</h1>
+        <h1 class="reported_title">신고 받은 문제 리스트</h1>
         <table>
             <thread>
                 <tr>
